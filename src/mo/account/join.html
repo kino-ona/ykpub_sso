@@ -1,0 +1,175 @@
+
+@@include('./inc/mo/pagehead.inc', {
+	"webroot": ".",
+	"pagetitle": "유한킴벌리 | 회원가입",
+})
+</head>
+
+<body>
+		<div class="sso_wrap">
+			<!-- header -->
+			@@include('./inc/mo/header.inc', {
+				"webroot": ".",
+				"headertype": "",
+				"logotype": "",
+			})
+			<!-- //header -->
+	<div id="container" class="contents">
+						<div class="row">
+<div class="join_wrap">
+<h1><span>유한킴벌리 통합회원</span>가입을 환영합니다.</h1>
+<p class="desc">유한킴벌리 통합회원 계정 하나로 맘큐 및 유한킴벌리 브랜드의 다양한 서비스를 이용할 수 있습니다.</p>
+<div class="btnwrap">
+	<a href="javascript:;" class="btn btn_nrmal auth_popup _pass _yk">본인인증으로 회원가입</a>
+								<a href="javascript:;" data-hash="#terms_agree_layer" class="btn btn_nrmal auth_popup _kakao" onclick="loginWithKakao()">
+		<i></i>쉽고 빠른 카카오 회원가입
+	</a>
+									</div>
+<p class="snoti">만 14세 미만의 아동은 회원가입이 불가합니다.</p>
+		
+<div class="com_benefit">
+			</div>
+
+<div class="com_guide">
+	<h2 class="h2_ti">이용안내</h2>
+	<ul class="dot_list">
+						<li>ID간의 맘큐포인트 및 선물대잔치 이관은 불가합니다.</li>
+		<li>유한킴벌리 브랜드 사이트, 맘큐에 공통 적용되는 통합 ID입니다.</li>
+		<li>기존 회원님께서는 본인인증을 통해 기존에 사용하시던 ID를 찾으실 수 있습니다.</li>
+		<li>브랜드 사이트, 맘큐 약관 동의를 하시면 통합회원 ID로 별도 회원가입없이 각 사이트를 이용하실 수 있습니다.</li>
+					</ul>
+</div>
+
+<div class="com_brand">
+	<h2 class="h2_ti">이용 가능 사이트</h2>
+	<ul class="logo_list">
+		<li>
+			<p class="logos logos_momq">
+				<a href="https://www.momq.co.kr" target="_blank"><span class="a11y_sr-only">맘큐</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_ykbrand">
+				<a href="https://www.ykbrand.co.kr" target="_blank"><span class="a11y_sr-only">유한킴벌리브랜드</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_huggies">
+				<a href="http://www.ykbrand.co.kr/huggies" target="_blank"><span class="a11y_sr-only">하기스</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_gnight">
+				<a href="http://www.ykbrand.co.kr/goodnite" target="_blank"><span class="a11y_sr-only">굿나이트</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_white">
+				<a href="http://www.ykbrand.co.kr/white" target="_blank"><span class="a11y_sr-only">화이트</span></a>
+			</p>
+		</li>
+		<li>
+				<p class="logos logos_good">
+				<a href="http://www.ykbrand.co.kr/goodfeel" target="_blank"><span class="a11y_sr-only">좋은느낌</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_lanature">
+				<a href="http://www.ykbrand.co.kr/lanature" target="_blank"><span class="a11y_sr-only">라네이처</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_kleenex">
+				<a href="http://www.ykbrand.co.kr/kleenex" target="_blank"><span class="a11y_sr-only">크리넥스</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_scott">
+				<a href="http://www.ykbrand.co.kr/scott" target="_blank"><span class="a11y_sr-only">스카트</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_my">
+				<a href="http://www.ykbrand.co.kr/mybidet" target="_blank"><span class="a11y_sr-only">마이비데</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_depand">
+				<a href="http://www.ykbrand.co.kr/depend" target="_blank"><span class="a11y_sr-only">디펜드</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_tn">
+				<a href="http://www.ykbrand.co.kr/tn" target="_blank"><span class="a11y_sr-only">티엔</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_green">
+				<a href="http://www.ykbrand.co.kr/greenfinger" target="_blank"><span class="a11y_sr-only">그린핑거</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_monit">
+				<a href="http://www.goodmonit.com" target="_blank"><span class="a11y_sr-only">모닛</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_dal">
+				<a href="https://play.google.com/store/apps/details?id=com.appknot.mygoodfeel" target="_blank"><span class="a11y_sr-only">달다방</span></a>
+			</p>
+		</li>
+		<li>
+			<p class="logos logos_ykplus">
+				<a href="https://m.oneulplus.com" target="_blank"><span class="a11y_sr-only">오늘플러스</span></a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+		<!--
+<div class="btnwrap btn_foo">
+	<a href="/account/join/create" class="btn btn_next">다음</a>
+</div>
+		-->
+
+</div>
+</div>
+
+<script>
+Kakao.init("8841bbaa64390509a82049e2a82e6038");
+var kkoInit = Kakao.isInitialized();
+
+function loginWithKakao() {
+if(!kkoInit){
+alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
+return false;
+}
+Kakao.Auth.authorize({
+redirectUri: "https://www.yksso.co.kr"+'/auth/kakao',
+		serviceTerms: "sso_terms_agree,sso_privacy_agree,sso_privacy_service_agree",
+channelPublicId: "null",
+});
+}
+
+var errorMessage = '';
+var authErrorMessage = '';
+var popup;
+
+
+
+
+
+$(document).on('click', '._pass', function() {
+popup = window.open('/user/auth/request', 'auth_popup', 'width=432,height=560,scollbar=yes');
+});
+
+function next(success, message) {
+if (success) {
+		window.location.href = '/account/join/create?site_code=SSO';
+}
+}
+</script>
+	</div>
+		</div>
+</body>
+</html>

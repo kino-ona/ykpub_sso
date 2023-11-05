@@ -1,0 +1,212 @@
+
+@@include('./inc/pagehead.inc', {
+	"webroot": ".",
+	"pagetitle": "유한킴벌리 | 로그인",
+})
+</head>
+
+<body>
+	<div class="sso_wrap">
+		<!-- header -->
+		@@include('./inc/header.inc', {
+			"webroot": ".",
+			"headertype": "",
+			"logotype": "",
+		})
+		<!-- //header -->
+		
+		<div id="container" class="contents">
+			<div class="row">
+				<div class="login_wrap">
+					<h2 class="title">로그인</h2>
+
+					<div class="login_frm">
+						<form name="loginFrm" method="POST" action="/login">
+							<input type="hidden" name="_token" value="">               
+							<input type="hidden" name="recaptcha_token" value="">
+							<div class="line">
+									<p class="ti">아이디</p>
+									<p class="frm">
+											<input type="text" name="userid" value="" maxlength="" placeholder=" 아이디를 입력해주세요. " >
+									</p>
+							</div>
+							<div class="line">
+								<p class="ti">비밀번호</p>
+								<p class="frm masking">
+										<input type="password" name="password" maxlength="" placeholder="비밀번호를 입력해주세요." >
+										<button type="button" class="btn_masking"><i class="ic_hide"></i></button>
+								</p>
+							</div>
+
+							<div class="chk">
+								<input type="checkbox" name="id_saved" id="idsave" ><label for="idsave">아이디 저장</label>
+							</div>
+						</form>
+					</div>
+
+					<div class="sns_login">
+						<p>
+							<a href="javascript:;" onclick="$('form[name=loginFrm]').submit();" class="btn btn_blue">로그인</a>
+						</p>
+						<p class="_full">
+							<a href="javascript:;" onclick="loginWithKakao()" data-type="kakao" class="bt_kakao"><i></i>카카오로 로그인하기</a>
+						</p>
+						<p>
+							<a href="javascript:;" data-type="naver" class="bt_naver _gray js-btn-sns-login"><i></i>네이버로 로그인하기</a>
+						</p>
+					</div>
+					<p class="help">네이버는 기존 간편회원의 로그인만 가능합니다.</p>
+					<div class="util util-member">
+						<a href="/find/id">아이디 찾기</a>
+						<a href="/find/password">비밀번호 찾기</a>
+						<a href="/account/join">회원가입</a>
+					</div>
+				</div>
+
+				<div class="banner wide">
+					<!--a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" target=&quot;_blank&quot;><img src="/images/pc/banner2.jpg?ver=2" alt="banner"></a>
+					<div class="helpwrap">
+						<ul>
+								<li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
+								<li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
+						</ul>
+					</div-->
+				</div>
+			</div>
+
+			<!-- SSO 페이스북 종료 안내 팝업 : 20221026 -->
+			<div class="layerbody show" id="notiLayer" style="display:none;">
+				<div class="layerwrap">
+					<a class="btn_close" onclick="$('#notiLayer').hide()"><span class="a11y_sr-only">close</span></a>
+					<div class="layhead">
+							<p><img src="https://www.yksso.co.kr/images/pc/yksso_logo.png" style="height:20px;" alt="유한킴벌리 통합회원"></p>
+					</div>
+					<div class="layconts" style="border-top: 1px solid #ddd;padding-bottom: 25px;">
+							<div style="padding: 35px 0;text-align:center;">
+									<strong style="font-size: 16px;font-weight: 500;">페이스북 간편 로그인 접속/이용은 중단되었습니다.<br>
+											페이스북 회원께서는 유한킴벌리 통합회원으로 <br>
+											가입 후 이용해주세요.</strong>
+									<div class="btnwrap">
+											<a href="/account/join" class="btnDefault btnfull">유한킴벌리 통합회원 가입</a>
+									</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<!--// SSO 페이스북 종료 안내 팝업 : 20221026 -->
+
+			<script>
+				if(self.opener){
+						window.resizeTo(835, 900);
+				}
+			</script>
+
+			<script>
+					Kakao.init("8841bbaa64390509a82049e2a82e6038");
+					var kkoInit = Kakao.isInitialized();
+
+					var autoLogin = $('input[name=auto_login]').prop('checked');
+					$('input[name=auto_login]').change(function(){
+							autoLogin = $('input[name=auto_login]').prop('checked');
+					})
+
+					function loginWithKakao() {
+							if(!kkoInit){
+									alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
+									return false;
+							}
+
+							var autoParam = '';
+							if(autoLogin) var autoParam = '/is_auto';
+
+							Kakao.Auth.authorize({
+									redirectUri: "https://www.yksso.co.kr"+'/auth/kakao'+autoParam,
+									serviceTerms: "sso_terms_agree,sso_privacy_agree,ykbrand_terms_agree,ykbrand_ad_receive_agree,sso_privacy_service_agree,ykbrand_adinfo_receive_SMS,ykbrand_adinfo_receive_EMAIL",
+									channelPublicId: "null",
+							});
+					}
+			</script>
+
+			<script>
+			var errorMessage = '';
+			var otherTermsMessage = '';
+			var exitCompleteMessage = '';
+			var dormancyComleteMessage = '';
+			var pomeError = '';
+			var isSubmited = false;
+			$(document).ready(function() {
+					$('form[name="loginFrm"]').submit(function () {
+							if (! isSubmited) {
+									isSubmited = true;
+									return true;
+							}
+							alert('로그인 처리 중 입니다. 잠시만 기다려 주세요.');
+							return false;
+					});
+									if (errorMessage != '') {
+							alert(errorMessage);
+					}
+
+							
+					
+					
+				
+					$(document).on('keypress', 'input[name="password"]', function(e) {
+							if (e.keyCode == 13) {
+									$('form[name="loginFrm"]').submit();
+							}
+					});
+
+					// sns Login
+					$('.js-btn-sns-login').on('click', function(e) {
+							e.preventDefault();
+							var type = $(this).data('type');
+							snsLogin(type, 'login');
+					});
+			});
+
+			var snsLoginPopup;
+			function snsLogin (type, rp_type) {
+					var _w = 480;
+					var _h = 600;
+					if (type == 'facebook') { _w = 1015; }
+					
+					var autoParam = '';
+					if(autoLogin) var autoParam = '&is_auto=1';
+
+					snsLoginPopup = window.open('/login/'+type+'?rp_type='+rp_type + autoParam, 'snsLogin', 'width='+_w+',height='+_h+',scrollbars=yes');
+					return false;
+			}
+			function snsCallback (success, msg, url) {
+					if (success == false) {
+							if (msg) {
+									alert(msg);
+							}
+							if (typeof url == 'undefined') {
+									window.location.reload(); 
+							} else {
+									window.location.href = url;
+							}
+							return;
+					}
+							self.focus();
+					window.location.href = url;
+			}
+
+			$('.btn_masking').on('mousedown touchstart', function(){
+					event.preventDefault();
+					$('.btn_masking i').toggleClass('ic_hide');
+					$('.btn_masking i').toggleClass('ic_show');
+					if($('input[name=password]').attr('type') == 'password'){
+							$('input[name=password], input[name=password_confirmation]').attr('type','text');
+					}else{
+							$('input[name=password], input[name=password_confirmation]').attr('type','password');
+					}
+			});
+
+			</script>
+
+		</div>
+	</div>
+</body>
+</html>

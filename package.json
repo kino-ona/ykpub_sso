@@ -1,0 +1,44 @@
+{
+  "name": "lgmember2023",
+  "version": "1.0.0",
+  "description": "lgmemberdays 웹 / 모바일 반응형",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kino-ona/lgmember2023.git"
+  },
+  "author": "ONA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kino-ona/lgmember2023/issues"
+  },
+  "homepage": "https://github.com/kino-ona/lgmember2023#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-dependents": "^1.2.5",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-noop": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp.spritesmith": "^6.12.1",
+    "gulp.spritesmith-multi": "^3.1.0",
+    "merge-stream": "^2.0.0",
+    "sass": "^1.50.1",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
