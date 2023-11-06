@@ -1,0 +1,496 @@
+@@include('./inc/mo/pagehead.inc', {
+	"webroot": ".",
+	"pagetitle": "유한킴벌리 | 로그인",
+	})
+</head>
+
+<body>
+	<div class="sso_wrap">
+		<!-- header -->
+		@@include('./inc/mo/header.inc', {
+		"webroot": ".",
+		"headertype": "",
+		"logotype": "",
+		})
+		<!-- //header -->
+		<div id="container" class="contents">
+			<style>
+				.input_frm .put.col3 {
+					width: calc((100% / 3) - 75px);
+					margin-right: 15px;
+				}
+
+				.input_frm .put.col3>span {
+					display: inline-block;
+					font-size: 16px;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+
+				.input_frm .put.col3:last-child {
+					margin-right: 0;
+				}
+
+				.birth_change {
+					position: absolute;
+					right: 0;
+					top: 10px;
+				}
+			</style>
+			<div class="row">
+				<div class="my_wrap">
+					<div class="tabwrap">
+						<ul class="tablist">
+							<li class="seleted"><a href="/user/profile">회원정보 수정</a>
+							<li><a href="/user/terms">약관 관리</a>
+						</ul>
+					</div>
+
+					<h2 class="h2_ti">기본정보</h2>
+					<!-- 필수 정보 입력 -->
+					<form name="modifyFrm" method="POST" action="/user/syncUserNameChange">
+						<input type="hidden" name="_token" value=""> 
+						<input type="hidden" name="id" value="" />
+						<input type="hidden" name="userid" value="" />
+						<ul class="input_frm">
+							<li>
+								<p class="ti">이름*</p>
+								<p class="put" style="z-index:99;">
+									<input type="text" name="name" value="kino" readonly>
+									<a href="javascript:;" class="btn btn_small name_change_btn" onclick="changeName()">변경</a>
+								</p>
+								<ul class="dot_list" style="display:none">
+									<li>카카오싱크 회원의 이름 변경은 2회까지만 가능하며, 한글과 영문으로만 입력이 가능합니다. (이름은 숫자, 특수문자, 한글+영문 조합은 입력이 불가합니다.)</li>
+									<li style="color: #000;font-weight: bold;">맘큐 주문/결제/환불 및 선물대잔치 적립을 위해서 꼭 실명으로 입력해 주셔야 합니다.</li>
+								</ul>
+							</li>
+							<li>
+								<p class="ti">회원번호*</p>
+								<p class="put">
+									<input type="text" value="856649" readonly>
+								</p>
+							</li>
+							<li class="email">
+								<p class="ti">이메일*</p>
+								<p class="put">
+									<input type="text" name="email_id" value="crazykino" readonly> @ <input type="text" name="email_host"
+										value="kakao.com" readonly>
+								</p>
+							</li>
+							<li id="birth" style="position:relative;">
+								<p class="ti">생년월일</p>
+								<p class="put">
+									<input type="text" value="1981 년 6 월 22 일 " readonly>
+								</p>
+							</li>
+							<li>
+								<div class="ti">성별</div>
+								<p class="put full">
+									<select class="usersex" name="change_gender">
+										<option value="">선택</option>
+										<option value="M">남자</option>
+										<option value="W">여자</option>
+									</select>
+								</p>
+								<a href="javascript:;" class="btn btn_small birth_change" onclick="changeGender()">변경</a>
+							</li>
+							<li>
+								<p class="ti">휴대폰 번호*</p>
+								<p class="put">
+									<input type="tel" name="sns_mobile" value="01037693299" min="0" max="99999999999" maxlength="11"
+										readonly />
+								</p>
+							</li>
+
+						</ul>
+					</form>
+					<div class="help_desc">
+						<p class="help">아이정보는 맘큐 > 마이페이지 > 아이정보에서 추가 / 수정 하실 수 있습니다.
+							<span><a href="https://www.momq.co.kr/m/mypage.html?mypage_type=myfamily" class="btn btn_small" target="_blank">바로가기</a></span>
+						</p>
+					</div>
+
+					<div>
+						<h2 class="h2_ti">회원탈퇴</h2>
+						<p class="desc" style="word-break:break-all">유한킴벌리의 <strong style="color:#e63c4f">모든 서비스(맘큐, 오늘 플러스, 달다방,
+								통합브랜드)에 대한 탈퇴</strong>를 원하실 경우에만 진행해주세요. 개별 서비스 해지를 원하실 경우 화면 상단의 “약관 관리” 탭에서 개별로 해제 하실 수 있습니다.
+							<a href="/user/leave" class="btn btn_small bot">회원탈퇴</a>
+						</p>
+					</div>
+
+					<div class="btnwrap btn_foo">
+						<a href='javascript:;' onclick="$('form[name=modifyFrm]').submit()" class="btnDefault btnfull js-btn-sns-save">확인</a>
+					</div>
+
+				</div>
+
+				<form name="genderFrm" method="POST" action="/user/genderChange">
+					<input type="hidden" name="_token" value=""> 
+					<input type="hidden" name="gender">
+				</form>
+
+				<!-- 추천인 ID 검색 레이어  -->
+				<div class="layerbody" id="recommidLayer">
+					<div class="layerwrap recommidlay">
+						<a class="btn_close recommidLayer_close"><span class="a11y_sr-only">close</span></a>
+						<div class="layhead">
+							<p>추천인 ID 검색</p>
+						</div>
+						<div class="layconts">
+							<span class="noti">
+								추천인의 <b>ID를 알고 계시면 추천인 ID로 검색</b>, 추천인이 <b>카카오로 가입하신 회원이라면 회원번호로 검색</b>, <b>ID또는 회원번호를 알 수 없으면 회원정보로 검색
+									버튼</b>을 눌러주세요.
+								<br>(카카오로 가입 하신 경우 회원정보변경에서 회원번호를 확인하실 수 있습니다.)
+							</span>
+							<div class="select_chk">
+								<p class="rchk"><input type="radio" id="sch01" name="type" value="id" checked><label for="sch01">아이디로 검색</label></p>
+								<p class="rchk"><input type="radio" id="sch03" name="type" value="number"><label for="sch03">회원 번호로 검색</label></p>
+								<p class="rchk"><input type="radio" id="sch02" name="type" value="info"><label for="sch02">회원 정보로 검색</label></p>
+							</div>
+							<ul class="putfrm idsch">
+								<li>
+									<p class="name"><span class="esse">*</span>아이디</p>
+									<p class="put"><input class="recommed_input" type="text" name="userid" placeholder="추천인 아이디를 입력해주세요.">
+									</p>
+								</li>
+							</ul>
+							<ul class="putfrm usersch hid">
+								<li>
+									<p class="name"><span class="esse">*</span>이름</p>
+									<p class="put"><input class="recommed_input" type="text" name="name" placeholder="추천인 이름을 입력해주세요.">
+									</p>
+								</li>
+								<li>
+									<p class="name"><span class="esse">*</span>휴대폰 번호</p>
+									<p class="put"><input class="recommed_input" type="text" name="mobile" placeholder="-를 제외한 숫자만 입력해주세요."></p>
+								</li>
+								<li class="noti">- 추천인이 유한킴벌리 카카오 통합회원인 경우 ID가 아닌 회원번호로 안내되니 참고 부탁드립니다.</span></li>
+								<li class="noti">- 추천인이 유한킴벌리 카카오 통합회원인 경우 회원번호로 검색하면 더 쉽고 빠르게 찾을 수 있습니다.</span></li>
+							</ul>
+							<ul class="putfrm numsch hid">
+								<li>
+									<p class="name"><span class="esse">*</span>회원번호</p>
+									<p class="put"><input class="recommed_input" type="text" name="usernum" placeholder="회원 번호를 입력해주세요."></p>
+								</li>
+								<li class="noti">- 회원번호는 유한킴벌리 카카오 통합회원만 확인이 가능하며, 마이페이지 또는 회원정보수정에서 확인할 수 있습니다.</span></li>
+							</ul>
+							<div class="btnwrap">
+								<a href="javascript:;" class="btn btnfull recommender_search">검색</a>
+							</div>
+							<div class="result" style="display:none">
+								<ul class="putfrm">
+									<li>
+										<p class="name">아이디</p>
+										<p class="put none">일치하는 정보가 없습니다.</p>
+										<p class="put recommender-error" style="color:#e63c4f; font-size:14px;"></p>
+										<p class="put search" style="display:none">
+											<span class="dp_text"></span>
+											<input type="hidden" name="recommender_userid" value="">
+											<input type="hidden" id="site_code" name="site_code" value="">
+											<input type="hidden" name="is_multi" value="N">
+											<span><a href="javascript:;" class="btn btnmedium recommender_choice" style="float:right">선택</a></span>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 추천인 ID 검색 레이어  -->
+				<script>
+					$(document).on('keypress', '.recommed_input', function (e) {
+						if (e.keyCode == 13) {
+							$('.recommender_search').click();
+						}
+					});
+					//추천인 관련 스크립트
+					$(document).on('click', '.openLayer', function () {
+						var hash = $(this).data('hash');
+						var isMulti = $(this).data('is_multi') ? $(this).data('is_multi') : 'N';
+						var siteCode = $(this).data('site_code');
+
+						//IOS 앱에서 스크롤락이 안먹혀서 false 로 ...처리
+
+						layer.open(hash, function () {
+							var layer = $('#recommidLayer');
+							$('input[name="userid"]', layer).val('');
+							$('input[name="name"]', layer).val('');
+							$('input[name="mobile"]', layer).val('');
+							$('input[name="usernum"]', layer).val('');
+							$('input[name="site_code"]', layer).val(siteCode);
+							$('input[name="is_multi"]', layer).val(isMulti);
+							$('.result .search .dp_text', layer).text('');
+							$('.result', layer).hide();
+						});
+					});
+
+					if ($('.recommidlay').length > 0) {
+						$('.recommidlay').find('#sch02').click(function () {
+							if ($(this).is(":checked")) {
+								$('.recommidlay').find('.idsch').addClass('hid');
+								$('.recommidlay').find('.usersch').removeClass('hid');
+								$('.recommidlay').find('.numsch').addClass('hid');
+							}
+						});
+						$('.recommidlay').find('#sch01').click(function () {
+							if ($(this).is(":checked")) {
+								$('.recommidlay').find('.idsch').removeClass('hid');
+								$('.recommidlay').find('.usersch').addClass('hid');
+								$('.recommidlay').find('.numsch').addClass('hid');
+							}
+						});
+						$('.recommidlay').find('#sch03').click(function () {
+							if ($(this).is(":checked")) {
+								$('.recommidlay').find('.idsch').addClass('hid');
+								$('.recommidlay').find('.usersch').addClass('hid');
+								$('.recommidlay').find('.numsch').removeClass('hid');
+							}
+						});
+					}
+
+					//추천인 검색
+					$(document).on('click', '.recommender_search', function () {
+						var layer = $('#recommidLayer');
+						var type = $('input:radio[name="type"]:checked', layer).val();
+						var userid = $('input[name="userid"]', layer).val();
+						var name = $('input[name="name"]', layer).val();
+						var mobile = $('input[name="mobile"]', layer).val();
+						var usernum = $('input[name="usernum"]', layer).val();
+						var siteCode = $('input[name="site_code"]', layer).val();
+
+						$('.result', layer).hide();
+						$('.result .search .dp_text', layer).text('');
+
+						$.ajax({
+							url: '/account/recommender',
+							type: 'post',
+							dataType: 'json',
+							data: {
+								'_token': 'vXMvSQrfreNbbAv6ktDemmIJFgvKH2rS9o5ZlAg3',
+								'type': type,
+								'userid': userid,
+								'name': name,
+								'mobile': mobile,
+								'usernum': usernum,
+								'site_code': siteCode,
+							},
+							success: function (res) {
+								$('.result', layer).show();
+								$('.result .put', layer).hide();
+								$('.result .search', layer).show();
+								$('.result .search .dp_text', layer).text(res.dp_text);
+								$('.result .search input[name=recommender_userid]', layer).val(res.userid);
+							},
+							error: function (res) {
+								console.log(res);
+								alert(res.responseJSON.messages);
+								// alert('SSO회원이 아니거나 휴면 계정인 경우 추천인 ID로 입력 할 수 없습니다. 다시 확인 후 입력해주세요.');
+								// var errors = res.responseJSON;
+								// $('.result', layer).show();
+								// if (errors.errorType == 'recommender') {
+								//     $('.result .recommender-error', layer).text(errors.messages).show();
+								//     $('.result .none', layer).hide();
+								// } else {
+								//     $('.result .recommender-error', layer).hide();
+								//     $('.result .none', layer).show();
+								// }
+								// $('.result .search', layer).hide();
+							}
+						});
+					});
+
+					//추천인 검색 방식 
+					$(document).on('click', '#recommidLayer input:radio[name="type"]', function () {
+						var layer = $('#recommidLayer');
+						$('input[name="userid"]', layer).val('');
+						$('input[name="name"]', layer).val('');
+						$('input[name="mobile"]', layer).val('');
+						$('.result', layer).hide();
+						$('.result .search .dp_text', layer).text('');
+					});
+
+					//추천인 선택
+					$(document).on('click', '.recommender_choice', function () {
+						var rlayer = $('#recommidLayer');
+						var preStr = $('input[name="is_multi"]', rlayer).val() == 'Y' ? $('input[name="site_code"]', rlayer).val() +
+							'_' : '';
+
+						$('input[name="' + preStr + 'recommender_code_text"]').val($('.result .search .dp_text', rlayer).text());
+						$('input[name="' + preStr + 'recommender_code"]').val($('.result .search input[name=recommender_userid]',
+							rlayer).val());
+						$('input[name="userid"]', rlayer).val('');
+						$('input[name="name"]', rlayer).val('');
+						$('input[name="mobile"]', rlayer).val('');
+						$('.result', rlayer).hide();
+						layer.close('#recommidLayer');
+					});
+				</script>
+				<script>
+					function changeName() {
+						$('input[name=name]').prop('readonly', false);
+						$('input[name=name]').focus();
+						$('input[name=name]').css({
+							'padding-left': '5px'
+						});
+						$('.name_change_btn').hide();
+						$('.dot_list').show();
+					}
+					$('.dot_list').click(function () {
+						$('input[name=name]').focus();
+					});
+
+
+
+					function changeBirth() {
+						$('input[name=birth_year]').val($('input[name=change_birth_year]').val());
+						$('input[name=birth_month]').val($('input[name=change_birth_month]').val());
+						$('input[name=birth_day]').val($('input[name=change_birth_day]').val());
+						$('form[name=birthFrm]').submit();
+					}
+
+					function changeGender() {
+						$('input[name=gender]').val($('select[name=change_gender]').val());
+						$('form[name=genderFrm]').submit();
+					}
+
+					$('#birth input').on('propertychange change keyup paste input', function () {
+						$(this).val($(this).val().replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'));
+					})
+				</script>
+
+				<!-- 비밀번호변경  -->
+				<div class="layerbody" id="pwdChangeLayer">
+					<div class="layerwrap pwdchangelayer">
+						<a href="javascript:;" class="btn_close pwdChangeLayer_close"><span class="a11y_sr-only">close</span></a>
+						<input type="hidden" name="id" value="" />
+						<input type="hidden" name="userid" value="" />
+						<div class="layhead">
+							<p>비밀번호 변경</p>
+						</div>
+						<div class="layconts">
+							<div>
+								<ul class="input_frm">
+									<li>
+										<p class="ti">현재 비밀번호</p>
+										<p class="put masking">
+											<input type="password" name="current_password" value="" placeholder="현재 비밀번호를 입력해주세요.">
+											<button type="button" class="btn_masking"><i class="ic_hide"></i></button>
+										</p>
+										<span class="errtx change current_password"></span>
+									</li>
+									<li>
+										<p class="ti">신규 비밀번호</p>
+										<p class="put masking">
+											<input type="password" name="new_password" value="" placeholder="8~20자, 영문/숫자/특수문자 조합">
+											<button type="button" class="btn_masking"><i class="ic_hide"></i></button>
+										</p>
+										<span class="errtx change new_password"></span>
+									</li>
+									<li>
+										<p class="ti">비밀번호 확인</p>
+										<p class="put masking">
+											<input type="password" name="new_password_confirmation" value="" placeholder="비밀번호를 다시 입력해주세요.">
+											<button type="button" class="btn_masking"><i class="ic_hide"></i></button>
+										</p>
+										<span class="errtx change new_password_confirmation"></span>
+									</li>
+								</ul>
+							</div>
+							<div class="btnwrap">
+								<a href="javascript:;" class="btn btn_blue btnfull passwod_change_action">변경</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<script>
+					$(document).ready(function () {
+						$(document).on('click', '.passwod_change_action', function () {
+							var id = $('input[name="id"]', '#pwdChangeLayer').val();
+							var userid = $('input[name="userid"]', '#pwdChangeLayer').val();
+							var current_password = $('input[name="current_password"]', '#pwdChangeLayer').val();
+							var new_password = $('input[name="new_password"]', '#pwdChangeLayer').val();
+							var new_password_confirmation = $('input[name="new_password_confirmation"]', '#pwdChangeLayer').val();
+							$('.change.new_password').text('');
+							if (checkPasswordPattern(new_password) == false) {
+								$('.change.new_password').text('비밀번호는 8자리 이상 문자, 숫자, 특수문자로 구성하여야 합니다.');
+								$('[name="new_password"]', '#pwdChangeLayer').val('').focus();
+								return false;
+							}
+							if (checkPasswordPatternComp(new_password, userid) == false) {
+								$('.change.new_password').text('아이디와 3자리 이상 중복값 및 4자리 이상의 연속되는 숫자는 사용이 불가합니다.');
+								$('[name="new_password"]', '#pwdChangeLayer').val('').focus();
+								return false;
+							}
+							$.ajax({
+								url: '/user/passwordChange',
+								type: 'post',
+								dataType: 'json',
+								data: {
+									'_token': 'vXMvSQrfreNbbAv6ktDemmIJFgvKH2rS9o5ZlAg3',
+									'id': id,
+									'userid': userid,
+									'current_password': current_password,
+									'new_password': new_password,
+									'new_password_confirmation': new_password_confirmation,
+								},
+								success: function (res) {
+									//alert(res.message);
+									$('#changeConfirm').show();
+									$('input[name="change_password"]').val(res.new_pwd);
+									$('input[name="current_password"]').val(res.current_pwd);
+									layer.close('#pwdChangeLayer', function () {
+										$('input[name="current_password"]', '#pwdChangeLayer').val('');
+										$('input[name="new_password"]', '#pwdChangeLayer').val('');
+										$('input[name="new_password_confirmation"]', '#pwdChangeLayer').val('');
+									});
+									//window.location.reload();
+								},
+								error: function (res) {
+									var errors = res.responseJSON;
+									var messages = errors.messages;
+									$('.change.current_password').text('');
+									$('.change.new_password').text('');
+									$('.change.new_password_confirmation').text('');
+									if (messages.current_password != undefined && messages.current_password.length > 0) {
+										$('.change.current_password').text(messages.current_password[0]);
+									}
+									if (messages.new_password != undefined && messages.new_password.length > 0) {
+										$('.change.new_password').text(messages.new_password[0]);
+									}
+									if (messages.new_password_confirmation != undefined && messages.new_password_confirmation
+										.length > 0) {
+										$('.change.new_password_confirmation').text(messages.new_password_confirmation[0]);
+									}
+									if (messages.password_pattern != undefined && messages.password_pattern.length > 0) {
+										$('.change.new_password').text(messages.password_pattern[0]);
+									}
+									return false;
+								}
+							});
+						});
+					});
+
+
+
+					$('.btn_masking').on('mousedown touchstart', function () {
+						event.preventDefault();
+						$('.btn_masking i').toggleClass('ic_hide');
+						$('.btn_masking i').toggleClass('ic_show');
+						if ($('input[name=current_password]').attr('type') == 'password') {
+							$('input[name=current_password], input[name=new_password], input[name=new_password_confirmation]').attr(
+								'type', 'text');
+						} else {
+							$('input[name=current_password], input[name=new_password], input[name=new_password_confirmation]').attr(
+								'type', 'password');
+						}
+					});
+				</script>
+				<!-- 비밀번호변경  -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

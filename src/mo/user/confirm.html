@@ -1,0 +1,78 @@
+@@include('./inc/mo/pagehead.inc', {
+	"webroot": ".",
+	"pagetitle": "유한킴벌리 | 로그인",
+	})
+</head>
+
+<body>
+	<div class="sso_wrap">
+		<!-- header -->
+		@@include('./inc/mo/header.inc', {
+		"webroot": ".",
+		"headertype": "",
+		"logotype": "",
+		})
+		<!-- //header -->
+		<div id="container" class="contents">
+			<div class="row">
+				<div class="my_wrap">
+					<h2 class="tit"><span>SNS 로그인</span>인증을 해주세요.</h2>
+					<p class="desc">회원님의 소중한 정보를 안전하게 보호하기 위해 인증이 필요합니다.<br>사용하고 계신 SNS 계정으로 다시 한번 로그인 해주세요.</p>
+					<br><br>
+					<div class="btnwrap btn_foo">
+						<a href="javascript:snsLogin('kakao', 'mypage_login');" class="btnDefault btnfull">확인</a>
+					</div>
+				</div>
+
+				<!--div class="banner">
+        <a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" ><img src="/images/mobile/banner2.jpg?ver=2" alt="banner"></a>
+    		</div-->
+			</div>
+
+			<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+			<script>
+				var snsLoginPopup;
+
+				function snsLogin(type, rp_type) {
+					var _w = 480;
+					var _h = 600;
+					if (type == 'facebook') {
+						_w = 1015;
+					}
+
+					if (type == 'kakao') {
+						Kakao.init("8841bbaa64390509a82049e2a82e6038");
+						Kakao.isInitialized();
+						Kakao.Auth.authorize({
+							redirectUri: "https://www.yksso.co.kr" + '/auth/kakao',
+							serviceTerms: 'sso_terms_agree,sso_privacy_agree',
+						});
+					} else {
+						snsLoginPopup = window.open('/login/' + type + '?rp_type=' + rp_type, 'snsLogin', 'width=' + _w + ',height=' +
+							_h + ',scrollbars=yes');
+					}
+				}
+
+				function snsCallback(success, msg, url) {
+					if (success == false) {
+						if (msg) {
+							alert(msg);
+						}
+						if (typeof url == 'undefined') {
+							window.location.reload();
+						} else {
+							window.location.href = url;
+						}
+						return;
+					}
+					snsLoginPopup.close();
+					self.focus();
+					alert('인증이 완료 되었습니다.');
+					window.location.href = url;
+				}
+			</script>
+		</div>
+	</div>
+</body>
+
+</html>

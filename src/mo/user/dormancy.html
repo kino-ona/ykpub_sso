@@ -1,0 +1,94 @@
+@@include('./inc/mo/pagehead.inc', {
+	"webroot": ".",
+	"pagetitle": "유한킴벌리 | 로그인",
+	})
+</head>
+
+<body>
+	<div class="sso_wrap">
+		<!-- header -->
+		@@include('./inc/mo/header.inc', {
+		"webroot": ".",
+		"headertype": "",
+		"logotype": "",
+		})
+		<!-- //header -->
+		<div id="container" class="contents">
+			<div class="row">
+				<div class="mem_wrap">
+					<h2 class="tit"><span>계정이 휴면</span>상태입니다.</h2>
+					<p class="desc">회원님의 정보를 안전하게 보호하기 위해 <span class="br"></span>1년 이상 로그인하지 않은 계정은 휴면상태로 전환됩니다.<br>본인인증을 하시면
+						휴면 상태가 해제되어 유한킴벌리 통합회원 계정을<span class="br"></span>다시 이용하실 수 있습니다.</p>
+					<div class="btnwrap">
+						<a href="javascript:snsLogin('kakao', 'dormancy_login');" class="btnDefault btnfull btnline">본인인증</a>
+					</div>
+
+				</div>
+				<!--div class="banner">
+        <a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" ><img src="/images/mobile/banner2.jpg?ver=2" alt="banner"></a>
+    		</div-->
+
+			</div>
+			<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+			<script>
+				var errorMessage = '';
+				var authErrorMessage = '';
+				var popup;
+				$(document).ready(function () {
+
+					$(document).on('click', '.auth_popup', function () {
+						popup = window.open('/user/auth/request', 'auth_popup', 'width=432,height=560,scollbar=yes');
+					});
+
+				});
+
+				function next(success, message) {
+					if (success) {
+						window.location.reload();
+					}
+				}
+
+				var snsLoginPopup;
+
+				function snsLogin(type, rp_type) {
+					var _w = 480;
+					var _h = 600;
+					if (type == 'facebook') {
+						_w = 1015;
+					}
+
+					if (type == 'kakao') {
+						Kakao.init("8841bbaa64390509a82049e2a82e6038");
+						Kakao.isInitialized();
+						Kakao.Auth.authorize({
+							redirectUri: "https://www.yksso.co.kr" + '/auth/kakao',
+							serviceTerms: 'sso_terms_agree,sso_privacy_agree',
+						});
+					} else {
+						snsLoginPopup = window.open('/login/' + type + '?rp_type=' + rp_type, 'snsLogin', 'width=' + _w + ',height=' +
+							_h + ',scrollbars=yes');
+					}
+				}
+
+				function snsCallback(success, msg, url) {
+					if (success == false) {
+						if (msg) {
+							alert(msg);
+						}
+						if (typeof url == 'undefined') {
+							window.location.reload();
+						} else {
+							window.location.href = url;
+						}
+						return;
+					}
+					snsLoginPopup.close();
+					self.focus();
+					window.location.href = url;
+				}
+			</script>
+		</div>
+	</div>
+</body>
+
+</html>

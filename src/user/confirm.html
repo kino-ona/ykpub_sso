@@ -1,79 +1,79 @@
-
 @@include('./inc/pagehead.inc', {
-	"webroot": ".",
-	"pagetitle": "유한킴벌리 | 마이페이지",
+"webroot": ".",
+"pagetitle": "유한킴벌리 | 마이페이지",
 })
 </head>
 
-    <body>
-        <div class="sso_wrap">
-					<!-- header -->
-					@@include('./inc/header.inc', {
-						"webroot": ".",
-						"headertype": "",
-						"logotype": "",
-					})
-					<!-- //header -->
-			<div id="container" class="contents">
-                <div class="row">
-    <div class="my_wrap">
-        <h2 class="tit"><span>비밀번호</span>입력해주세요.</h2>
-        <p class="desc">회원님의 소중한 정보를 안전하게 보호하기 위해 인증이 필요합니다.</p>
+<body>
+	<div class="sso_wrap">
+		<!-- header -->
+		@@include('./inc/header.inc', {
+		"webroot": ".",
+		"headertype": "",
+		"logotype": "",
+		})
+		<!-- //header -->
+		<div id="container" class="contents">
+			<div class="row">
+				<div class="my_wrap">
+					<h2 class="tit"><span>비밀번호</span>입력해주세요.</h2>
+					<p class="desc">회원님의 소중한 정보를 안전하게 보호하기 위해 인증이 필요합니다.</p>
 
-        <div class="memberfrm result">
-            <ul class="write">
-                <li>
-                    <form name="passwodFrm" method="POST" action="/user/confirm">
-                        <input type="hidden" name="_token" value="TiJR7Wwrsi5eS6shmOopTrBWB8jvrvk1corKgV5D">                        <p class="ti">비밀번호</p>
-                        <p class="put masking">
-                            <input type="password" name="password" value="" placeholder="로그인 시 사용하는 비밀번호를 입력해주세요." >
-                            <button type="button" class="btn_masking"><i class="ic_hide"></i></button>
-                        </p>
-                    </form>
-                </li>
-            </ul>
-                    </div>
-        <div class="btnwrap">
-            <a href="javascript:;" onclick="$('form[name=passwodFrm]').submit();" class="btnDefault btnfull">확인</a>
-        </div>
-    </div>
+					<div class="memberfrm result">
+						<ul class="write">
+							<li>
+								<form name="passwodFrm" method="POST" action="/user/confirm">
+									<input type="hidden" name="_token" value="TiJR7Wwrsi5eS6shmOopTrBWB8jvrvk1corKgV5D">
+									<p class="ti">비밀번호</p>
+									<p class="put masking">
+										<input type="password" name="password" value="" placeholder="로그인 시 사용하는 비밀번호를 입력해주세요.">
+										<button type="button" class="btn_masking"><i class="ic_hide"></i></button>
+									</p>
+								</form>
+							</li>
+						</ul>
+					</div>
+					<div class="btnwrap">
+						<a href="javascript:;" onclick="$('form[name=passwodFrm]').submit();" class="btnDefault btnfull">확인</a>
+					</div>
+				</div>
 
-        <!--div class="banner">
+				<!--div class="banner">
         <a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" target=&quot;_blank&quot;><img src="/images/pc/banner2.jpg?ver=2" alt="banner"></a>
-    </div-->
-    </div>
-<script type="text/javascript">
-//$(window).load(function() {
-    //$(window).scroll(function() {
-        //var scroll = $(document).scrollTop();
-        //if (scroll > 0) {
-            //$(document).scrollTop(0);
-        //}
-    //});
-//});
-$(document).ready(function(){
-
-    $(document).on('keypress', 'input[name="password"]', function(e) {
-        if (e.keyCode == 13) {
-            $('form[name="passwodFrm"]').submit();
-        }
-    });
-});
-
-
-$('.btn_masking').on('mousedown touchstart', function(){
-    event.preventDefault();
-    $('.btn_masking i').toggleClass('ic_hide');
-    $('.btn_masking i').toggleClass('ic_show');
-    if($('input[name=password]').attr('type') == 'password'){
-        $('input[name=password], input[name=password_confirmation]').attr('type','text');
-    }else{
-        $('input[name=password], input[name=password_confirmation]').attr('type','password');
-    }
-});
-
-</script>
+    		</div-->
 			</div>
-        </div>
-    </body>
+			<script type="text/javascript">
+				//$(window).load(function() {
+				//$(window).scroll(function() {
+				//var scroll = $(document).scrollTop();
+				//if (scroll > 0) {
+				//$(document).scrollTop(0);
+				//}
+				//});
+				//});
+				$(document).ready(function () {
+
+					$(document).on('keypress', 'input[name="password"]', function (e) {
+						if (e.keyCode == 13) {
+							$('form[name="passwodFrm"]').submit();
+						}
+					});
+				});
+
+
+				$('.btn_masking').on('mousedown touchstart', function () {
+					event.preventDefault();
+					$('.btn_masking i').toggleClass('ic_hide');
+					$('.btn_masking i').toggleClass('ic_show');
+					if ($('input[name=password]').attr('type') == 'password') {
+						$('input[name=password], input[name=password_confirmation]').attr('type', 'text');
+					} else {
+						$('input[name=password], input[name=password_confirmation]').attr('type', 'password');
+					}
+				});
+			</script>
+		</div>
+	</div>
+</body>
+
 </html>

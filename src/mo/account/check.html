@@ -1,6 +1,6 @@
 @@include('./inc/mo/pagehead.inc', {
 "webroot": ".",
-"pagetitle": "유한킴벌리 | 로그인",
+"pagetitle": "유한킴벌리 | 회원가입",
 })
 </head>
 
@@ -62,14 +62,15 @@
 
 				</div>
 
+
 				<div class="banner wide">
 					<!--a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" ><img src="/images/mobile/banner2.jpg?ver=2" alt="banner"></a>
-        		<div class="helpwrap">
-                <ul>
-                     <li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
-                     <li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
-                </ul>
-        	</div-->
+        	<div class="helpwrap">
+						<ul>
+									<li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
+									<li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
+						</ul>
+        	/div-->
 				</div>
 			</div>
 
@@ -95,7 +96,7 @@
 			<!--// SSO 페이스북 종료 안내 팝업 : 20221026 -->
 
 
-			<script>
+			<!-- <script>
 				Kakao.init("8841bbaa64390509a82049e2a82e6038");
 				var kkoInit = Kakao.isInitialized();
 
@@ -119,7 +120,8 @@
 						channelPublicId: "null",
 					});
 				}
-			</script>
+			</script> -->
+
 
 			<script>
 				var errorMessage = '';
@@ -140,11 +142,6 @@
 					if (errorMessage != '') {
 						alert(errorMessage);
 					}
-
-
-
-
-
 					$(document).on('keypress', 'input[name="password"]', function (e) {
 						if (e.keyCode == 13) {
 							$('form[name="loginFrm"]').submit();
@@ -171,8 +168,8 @@
 					var autoParam = '';
 					if (autoLogin) var autoParam = '&is_auto=1';
 
-					snsLoginPopup = window.open('/login/' + type + '?rp_type=' + rp_type + autoParam, 'snsLogin',
-						'width=' + _w + ',height=' + _h + ',scrollbars=yes');
+					snsLoginPopup = window.open('/login/' + type + '?rp_type=' + rp_type + autoParam, 'snsLogin', 'width=' + _w +
+						',height=' + _h + ',scrollbars=yes');
 					return false;
 				}
 
