@@ -1,4 +1,4 @@
-@@include('./inc/mo/pagehead.inc', {
+@@include('../inc/mo/pagehead.inc', {
 "webroot": ".",
 "pagetitle": "유한킴벌리 | 로그인",
 })
@@ -7,7 +7,7 @@
 <body>
 	<div class="sso_wrap">
 		<!-- header -->
-		@@include('./inc/mo/header.inc', {
+		@@include('../inc/mo/header.inc', {
 		"webroot": ".",
 		"headertype": "",
 		"logotype": "",
@@ -37,6 +37,7 @@
 							</div>
 
 							<div class="chk">
+								<input type="checkbox" name="id_auto" id="autologin"><label for="autologin">자동 로그인</label>
 								<input type="checkbox" name="id_saved" id="idsave"><label for="idsave">아이디 저장</label>
 							</div>
 						</form>
@@ -57,7 +58,11 @@
 					<div class="util util-member">
 						<a href="/find/id">아이디 찾기</a>
 						<a href="/find/password">비밀번호 찾기</a>
-						<a href="/account/join">회원가입</a>
+						<a href="/account/join">
+							<!-- 202311 회원가입 개선 : 툴팁 추가 //-->
+							<span class="tooltiptext tooltip-top">가입하고 혜택 받기</span>
+							회원가입
+						</a>
 					</div>
 
 				</div>
@@ -65,10 +70,10 @@
 				<div class="banner wide">
 					<!--a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" ><img src="/images/mobile/banner2.jpg?ver=2" alt="banner"></a>
         		<div class="helpwrap">
-                <ul>
-                     <li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
-                     <li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
-                </ul>
+							<ul>
+									<li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
+									<li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
+							</ul>
         	</div-->
 				</div>
 			</div>

@@ -6,6 +6,7 @@
 <meta name="title" content="유한킴벌리" />
 <meta name="keywords" content="유한킴벌리">
 <meta name="description" content="유한킴벌리" />
+<title>@@pagetitle</title>
 <link rel="stylesheet" href="/css/common.css" type="text/css" media="all">
 <link rel="stylesheet" href="/css/reset_pc.css" type="text/css" media="all">
 <link rel="stylesheet" href="/css/pc.css" type="text/css" media="all">

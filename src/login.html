@@ -39,6 +39,7 @@
 							</div>
 
 							<div class="chk">
+								<input type="checkbox" name="id_auto" id="autologin"><label for="autologin">자동 로그인</label>
 								<input type="checkbox" name="id_saved" id="idsave" ><label for="idsave">아이디 저장</label>
 							</div>
 						</form>
@@ -59,7 +60,11 @@
 					<div class="util util-member">
 						<a href="/find/id">아이디 찾기</a>
 						<a href="/find/password">비밀번호 찾기</a>
-						<a href="/account/join">회원가입</a>
+						<a href="/account/join">
+							<!-- 202311 회원가입 개선 : 툴팁 추가 //-->
+							<span class="tooltiptext tooltip-top">가입하고 혜택 받기</span>
+							회원가입
+						</a>
 					</div>
 				</div>
 
@@ -67,8 +72,8 @@
 					<!--a href="https://www.momq.co.kr/shop/plan.html?plan_id=469" target=&quot;_blank&quot;><img src="/images/pc/banner2.jpg?ver=2" alt="banner"></a>
 					<div class="helpwrap">
 						<ul>
-								<li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
-								<li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
+							<li>맘큐&gt;마이페이지&gt;<strong>아이(태아) 정보 추가/수정</strong>에서 등록 하실 수 있습니다.</li>
+							<li>쇼핑지원금은 아이정보 등록 또는 수정 시 최초 1회에 한해 즉시 지급되며,<br>마이페이지&gt;쿠폰/쇼핑지원금에서 확인 하실 수 있습니다.</li>
 						</ul>
 					</div-->
 				</div>
@@ -82,14 +87,13 @@
 							<p><img src="https://www.yksso.co.kr/images/pc/yksso_logo.png" style="height:20px;" alt="유한킴벌리 통합회원"></p>
 					</div>
 					<div class="layconts" style="border-top: 1px solid #ddd;padding-bottom: 25px;">
-							<div style="padding: 35px 0;text-align:center;">
-									<strong style="font-size: 16px;font-weight: 500;">페이스북 간편 로그인 접속/이용은 중단되었습니다.<br>
-											페이스북 회원께서는 유한킴벌리 통합회원으로 <br>
-											가입 후 이용해주세요.</strong>
-									<div class="btnwrap">
-											<a href="/account/join" class="btnDefault btnfull">유한킴벌리 통합회원 가입</a>
-									</div>
+						<div style="padding: 35px 0;text-align:center;">
+							<strong style="font-size: 16px;font-weight: 500;">페이스북 간편 로그인 접속/이용은 중단되었습니다.<br>
+									페이스북 회원께서는 유한킴벌리 통합회원으로 <br>가입 후 이용해주세요.</strong>
+							<div class="btnwrap">
+								<a href="/account/join" class="btnDefault btnfull">유한킴벌리 통합회원 가입</a>
 							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -97,7 +101,7 @@
 
 			<script>
 				if(self.opener){
-						window.resizeTo(835, 900);
+					window.resizeTo(835, 900);
 				}
 			</script>
 
@@ -143,54 +147,50 @@
 							alert('로그인 처리 중 입니다. 잠시만 기다려 주세요.');
 							return false;
 					});
-									if (errorMessage != '') {
-							alert(errorMessage);
+						if (errorMessage != '') {
+						alert(errorMessage);
 					}
-
-							
-					
-					
 				
 					$(document).on('keypress', 'input[name="password"]', function(e) {
-							if (e.keyCode == 13) {
-									$('form[name="loginFrm"]').submit();
-							}
+						if (e.keyCode == 13) {
+							$('form[name="loginFrm"]').submit();
+						}
 					});
 
 					// sns Login
 					$('.js-btn-sns-login').on('click', function(e) {
-							e.preventDefault();
-							var type = $(this).data('type');
-							snsLogin(type, 'login');
+						e.preventDefault();
+						var type = $(this).data('type');
+						snsLogin(type, 'login');
 					});
 			});
 
 			var snsLoginPopup;
 			function snsLogin (type, rp_type) {
-					var _w = 480;
-					var _h = 600;
-					if (type == 'facebook') { _w = 1015; }
-					
-					var autoParam = '';
-					if(autoLogin) var autoParam = '&is_auto=1';
+				var _w = 480;
+				var _h = 600;
+				if (type == 'facebook') { _w = 1015; }
+				
+				var autoParam = '';
+				if(autoLogin) var autoParam = '&is_auto=1';
 
-					snsLoginPopup = window.open('/login/'+type+'?rp_type='+rp_type + autoParam, 'snsLogin', 'width='+_w+',height='+_h+',scrollbars=yes');
-					return false;
+				snsLoginPopup = window.open('/login/'+type+'?rp_type='+rp_type + autoParam, 'snsLogin', 'width='+_w+',height='+_h+',scrollbars=yes');
+				return false;
 			}
 			function snsCallback (success, msg, url) {
-					if (success == false) {
-							if (msg) {
-									alert(msg);
-							}
-							if (typeof url == 'undefined') {
-									window.location.reload(); 
-							} else {
-									window.location.href = url;
-							}
-							return;
-					}
-							self.focus();
-					window.location.href = url;
+				if (success == false) {
+						if (msg) {
+								alert(msg);
+						}
+						if (typeof url == 'undefined') {
+								window.location.reload(); 
+						} else {
+								window.location.href = url;
+						}
+						return;
+				}
+				self.focus();
+				window.location.href = url;
 			}
 
 			$('.btn_masking').on('mousedown touchstart', function(){
@@ -198,12 +198,11 @@
 					$('.btn_masking i').toggleClass('ic_hide');
 					$('.btn_masking i').toggleClass('ic_show');
 					if($('input[name=password]').attr('type') == 'password'){
-							$('input[name=password], input[name=password_confirmation]').attr('type','text');
+						$('input[name=password], input[name=password_confirmation]').attr('type','text');
 					}else{
-							$('input[name=password], input[name=password_confirmation]').attr('type','password');
+						$('input[name=password], input[name=password_confirmation]').attr('type','password');
 					}
 			});
-
 			</script>
 
 		</div>

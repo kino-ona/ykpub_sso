@@ -1,8 +1,9 @@
-
 @@include('./inc/pagehead.inc', {
 	"webroot": ".",
 	"pagetitle": "유한킴벌리 | 회원가입",
 })
+
+<script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,22 @@
 						</a>
 					</div>
 					<p class="snoti">만 14세 미만의 아동은 회원가입이 불가합니다.</p>
-			
+					
+					<!-- 202311 회원가입 개선 : 혜택 안내 //-->
 					<div class="com_benefit">
+						<h2 class="h2_ti">회원 혜택</h2>
+						<p class="desc">momQ 최초 가입 시 1만 7천원 상당 즉시 할인 혜택</p>
+						<div class="coupon-swipe swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./images/coupon_01.png" alt="쿠폰이미지">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/coupon_02.png" alt="쿠폰이미지">
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 
 					<div class="com_guide">
@@ -130,39 +145,51 @@
 				</div>
 			</div>
 
-			<script>
+			<!-- <script>
 			Kakao.init("8841bbaa64390509a82049e2a82e6038");
 			var kkoInit = Kakao.isInitialized();
 
 			function loginWithKakao() {
-			if(!kkoInit){
-			alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
-			return false;
-			}
-			Kakao.Auth.authorize({
-			redirectUri: "https://www.yksso.co.kr"+'/auth/kakao',
+				if(!kkoInit){
+					alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
+					return false;
+				}
+				Kakao.Auth.authorize({
+					redirectUri: "https://www.yksso.co.kr"+'/auth/kakao',
 					serviceTerms: "sso_terms_agree,sso_privacy_agree,sso_privacy_service_agree",
-			channelPublicId: "null",
-			});
+					channelPublicId: "null",
+				});
 			}
 
 			var errorMessage = '';
 			var authErrorMessage = '';
 			var popup;
 
-
-
-
-
 			$(document).on('click', '._pass', function() {
-			popup = window.open('/user/auth/request', 'auth_popup', 'width=432,height=560,scollbar=yes');
+				popup = window.open('/user/auth/request', 'auth_popup', 'width=432,height=560,scollbar=yes');
 			});
 
 			function next(success, message) {
-			if (success) {
+				if (success) {
 					window.location.href = '/account/join/create?site_code=SSO';
+				}
 			}
-			}
+			</script> -->
+
+			<script>
+				$(document).ready(function(){
+					var swiper = new Swiper('.coupon-swipe', {
+						slidesPerView: 2,
+						spaceBetween: 20,
+						paginationClickable: true,
+						keyboard: true,
+						speed: 400,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+						},
+					});
+				});
 			</script>
 		</div>
 	</div>
