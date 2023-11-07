@@ -3999,9 +3999,20 @@ p.help:before {
 	a {
 		position: relative;
 	}
+}
+.sso_wrap {
+  .select_chk {
+    span {
+      padding-bottom: 0;
+    }
+    > span {
+      padding-bottom: 20px;
+    }
+  }
+
 	.tooltiptext {
 		// visibility: hidden;
-		width: 130px;
+		min-width: 130px;
 		bottom: 150%;
 		left: 40%;
 		margin-left: -60px;
@@ -4009,31 +4020,71 @@ p.help:before {
 		color: #fff;
 		text-align: center;
 		border-radius: 5px;
-		padding: 5px 6px;
+		padding: 5px 6px !important;
 	
 		position: absolute;
 		z-index: 1;
 		font-size: 14px;
 		font-weight: 300;
-		&::after {
-			content: " ";
-			position: absolute;
-			border-style: solid;
-			border-width: 5px;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-color: #159FE3 transparent transparent transparent;
-		}
+    white-space: nowrap;
+    &.tooltip-top {
+      &::after {
+        content: " ";
+        position: absolute;
+        border-style: solid;
+        border-width: 5px;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: #159FE3 transparent transparent transparent;
+      }
+    }
+    &.tooltip-bottom {
+      bottom: -150%;
+      &::after {
+        content: " ";
+        position: absolute;
+        border-style: solid;
+        border-width: 5px;
+        top: -10px;
+        left: 50%;
+        margin-left: -5px;
+        border-bottom: 5px solid #159FE3;
+        border-top: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
 		
 	}
-}
-.sso_wrap {
 	.join_wrap {
 		.h2_ti {
 			padding-bottom: 0;
 			margin-bottom: 18px;
 		}
+    .recom {
+      position: relative;
+      .tooltiptext {
+        left: 12%;
+        bottom: -50%;
+        &::after {
+          left: 10%;
+        }
+      }
+    }
+    .recom-noti {
+      margin-bottom: 70px;
+      margin-top: 60px;
+      dd {
+        color: #159FE3;
+        &::before {
+          content: '-';
+          top: 0;
+          background-color: transparent;
+          color: #159FE3;
+        }
+      }
+    }
 	}
 	.com_benefit {
 		.desc { 
@@ -4110,4 +4161,22 @@ p.help:before {
 			background-color: #000;
 		}
 	}
+
+  .join_form {
+    .etc_frm {
+      .select_chk {
+        .rchk {
+          position: relative;
+          .tooltiptext {
+            &::after {
+              left: 25%;
+            }
+          }
+        }
+      }
+    }
+    .terms_chk._child {
+      margin-top: 60px;
+    }
+  }
 }
