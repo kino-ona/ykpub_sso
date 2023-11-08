@@ -7,10 +7,10 @@
 <meta name="keywords" content="유한킴벌리">
 <meta name="description" content="유한킴벌리" />
 <title>@@pagetitle</title>
-<link rel="stylesheet" href="/css/common.css" type="text/css" media="all">
-<link rel="stylesheet" href="/css/reset_pc.css" type="text/css" media="all">
-<link rel="stylesheet" href="/css/pc.css" type="text/css" media="all">
-<link rel="icon" href="/images/favicon_default.png" type="image/x-icon">
+<link rel="stylesheet" href="@@webroot/css/common.css" type="text/css" media="all">
+<link rel="stylesheet" href="@@webroot/css/reset_pc.css" type="text/css" media="all">
+<link rel="stylesheet" href="@@webroot/css/pc.css" type="text/css" media="all">
+<link rel="icon" href="@@webroot/images/favicon_default.png" type="image/x-icon">
 
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/v1/kakao.js"></script>
 <script type="text/javascript" src="https://www.yksso.co.kr/js/jquery-1.11.3.min.js"></script>

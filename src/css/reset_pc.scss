@@ -56,14 +56,14 @@ input[type="radio"] + label, input[type="checkbox"] + label {
 input[type="radio"] + label:before,  input[type="checkbox"] + label:before {
 	content:''; display:inline-block; width:26px; height:26px; margin:-4px 8px 0 0; vertical-align:middle;
 }
-input[type="checkbox"] + label:before {background:url(/images/pc/ico_check_off.png) no-repeat 0 0;}
+input[type="checkbox"] + label:before {background:url(../images/pc/ico_check_off.png) no-repeat 0 0;}
 input[type="checkbox"]:checked + label:before {
-	background:url(/images/pc/ico_check_on.png) no-repeat 0 0;
+	background:url(../images/pc/ico_check_on.png) no-repeat 0 0;
 }
-input[type="radio"] + label:before {background:url(/images/pc/ico_check2_off.png) no-repeat 0 0;}
+input[type="radio"] + label:before {background:url(../images/pc/ico_check2_off.png) no-repeat 0 0;}
 input[type="radio"]:checked + label{font-weight: 700;}
 input[type="radio"]:checked + label:before {
-	background:url(/images/pc/ico_check2_on.png) no-repeat 0 0;
+	background:url(../images/pc/ico_check2_on.png) no-repeat 0 0;
 }
 html,body { padding:0;margin:0;height: 100%; font-size: 14px;color:#000;background-color: #f4f6f8;}
 p { word-break: keep-all; }
@@ -120,7 +120,7 @@ span.br {display: block;}
 }
 .layerwrap .btn_close {
 	position: absolute;right:-20px;top:-20px;width:42px;height:42px;
-	background:url(/images/pc/btn_layclose.png) no-repeat 0 0;
+	background:url(../images/pc/btn_layclose.png) no-repeat 0 0;
 }
 .layerwrap .layhead {position: relative;padding-bottom:10px;font-size: 20px;}
 .layerwrap .btnwrap {margin-top:40px;}

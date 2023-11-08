@@ -1,16 +1,18 @@
-@@include('./inc/pagehead.inc', {
-"webroot": ".",
+@@include('../inc/pagehead.inc', {
+"webroot": "..",
 "pagetitle": "유한킴벌리 | 마이페이지 | 내 정보 수정",
 })
 </head>
 
 <body>
 	<div class="sso_wrap">
-		<header class="sso_head">
-			<div class="row">
-				<h1 class="brandlogo"><a href="javascript:void(0);"><span class="a11y_sr-only">유한킴벌리</span></a></h1>
-			</div>
-		</header>
+		<!-- header -->
+		@@include('../inc/header.inc', {
+		"webroot": "..",
+		"headertype": "",
+		"logotype": "",
+		})
+		<!-- //header -->
 		<div id="container" class="contents">
 			<div class="row">
 				<div class="mem_wrap">

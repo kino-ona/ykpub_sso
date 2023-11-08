@@ -17,7 +17,7 @@
 }
 .layerwrap .btn_close {
 	position: absolute;right:5px;top:-15px;width:30px;height:30px;
-	background:url(/images/pc/btn_layclose.png) no-repeat 0 0;background-size:30px;
+	background:url(../images/pc/btn_layclose.png) no-repeat 0 0;background-size:30px;
 }
 .layerwrap .layhead {position: relative;padding-bottom:10px;font-size: 15px;}
 .layerwrap .btnwrap {margin-top:20px;}
@@ -66,8 +66,8 @@ p.help:before {
 .sso_head .row a {display: block;width:100%;height:100%;}
 .sso_head .row .brandlogo{
   position: absolute;left:25px;top:23px;width:111px;height:25px;
-  /* background-image: url(/images/pc/ykbrand_logo.png); */
-  background-image: url(/images/pc/yklogototal.png);
+  /* background-image: url(../images/pc/ykbrand_logo.png); */
+  background-image: url(../images/pc/yklogototal.png);
   background-size:111px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@ p.help:before {
 .sso_head .row .brandlogo span.txt {display: inline-block;margin:-2px 0 0 120px;font-size: 12px;color:#313131;font-weight: 300;vertical-align:top;}
 .sso_head .row .childlogo {
   position: absolute;right:25px;top:21px;width:60px;height:20px;
-  background-image: url(/images/pc/momq_logo.png);
+  background-image: url(../images/pc/momq_logo.png);
   background-size:60px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -83,13 +83,13 @@ p.help:before {
 .sso_head .row .child-logo-tdplus {
     width:124px;
     height: 32px;
-    background-image: url(/images/pc/tdplus_logo.png);
+    background-image: url(../images/pc/tdplus_logo.png);
     background-size:124px;
 }
 .sso_head .row .child-logo-monit {
     width: 104px;
     height: 32px;
-    background-image: url(/images/pc/logo_monit.jpg);
+    background-image: url(../images/pc/logo_monit.jpg);
     background-size: 104px;
     top: 17px;
     right: 16px;
@@ -97,7 +97,7 @@ p.help:before {
 .sso_head .row .child-logo-mygf {
     width:90px;
     height:30px;
-    background-image: url(/images/pc/logo_feelgood.jpg);
+    background-image: url(../images/pc/logo_feelgood.jpg);
     background-size:90px;
     top: 15px;
     right: 20px;
@@ -132,16 +132,16 @@ p.help:before {
 	vertical-align: middle;
 }
 .sns_login .bt_naver > i {
-	background-image: url(/images/ico_naver.png);
+	background-image: url(../images/ico_naver.png);
 	background-size:15px;
 }
 .sns_login .bt_facebook > i {
 	width:15px;
-	background-image: url(/images/ico_facebook.png);
+	background-image: url(../images/ico_facebook.png);
 	background-size:8px;
 }
 .sns_login .bt_kakao > i {
-	background-image: url(/images/ico_kakao.png);
+	background-image: url(../images/ico_kakao.png);
 	background-size:20px;
 }
 .login_wrap .util {margin-bottom:25px;text-align: center;}
@@ -186,34 +186,34 @@ p.help:before {
 	background-size: cover;background-repeat: no-repeat;background-position: center center;
 }
 .sso_wrap .logo_list .logos a {display: block;width:100%;height:100%;}
-.sso_wrap .logo_list .logos_momq {background-image:url(/images/pc/logos_momq.jpg);}
-.sso_wrap .logo_list .logos_momq:hover {background-image:url(/images/pc/logos_momq_on.jpg);}
-.sso_wrap .logo_list .logos_ykbrand {background-image:url(/images/pc/logos_ykbrand.jpg);}
-.sso_wrap .logo_list .logos_ykbrand:hover {background-image:url(/images/pc/logos_ykbrand_on.jpg);}
-.sso_wrap .logo_list .logos_huggies {background-image:url(/images/pc/logos_huggies.jpg);}
-.sso_wrap .logo_list .logos_huggies:hover {background-image:url(/images/pc/logos_huggies_on.jpg);}
-.sso_wrap .logo_list .logos_gnight {background-image:url(/images/pc/logos_gnight.jpg);}
-.sso_wrap .logo_list .logos_gnight:hover {background-image:url(/images/pc/logos_gnight_on.jpg);}
-.sso_wrap .logo_list .logos_white {background-image:url(/images/pc/logos_white.jpg);}
-.sso_wrap .logo_list .logos_white:hover {background-image:url(/images/pc/logos_white_on.jpg);}
-.sso_wrap .logo_list .logos_good {background-image:url(/images/pc/logos_good.jpg);}
-.sso_wrap .logo_list .logos_good:hover {background-image:url(/images/pc/logos_good_on.jpg);}
-.sso_wrap .logo_list .logos_lanature {background-image:url(/images/pc/logos_lanature.jpg);}
-.sso_wrap .logo_list .logos_lanature:hover {background-image:url(/images/pc/logos_lanature_on.jpg);}
-.sso_wrap .logo_list .logos_kleenex {background-image:url(/images/pc/logos_kleenex.jpg);}
-.sso_wrap .logo_list .logos_kleenex:hover {background-image:url(/images/pc/logos_kleenex_on.jpg);}
-.sso_wrap .logo_list .logos_scott {background-image:url(/images/pc/logos_scott.jpg);}
-.sso_wrap .logo_list .logos_scott:hover {background-image:url(/images/pc/logos_scott_on.jpg);}
-.sso_wrap .logo_list .logos_my {background-image:url(/images/pc/logos_my.jpg);}
-.sso_wrap .logo_list .logos_my:hover {background-image:url(/images/pc/logos_my_on.jpg);}
-.sso_wrap .logo_list .logos_depand {background-image:url(/images/pc/logos_depand.jpg);}
-.sso_wrap .logo_list .logos_depand:hover {background-image:url(/images/pc/logos_depand_on.jpg);}
-.sso_wrap .logo_list .logos_tn {background-image:url(/images/pc/logos_tn.jpg);}
-.sso_wrap .logo_list .logos_tn:hover {background-image:url(/images/pc/logos_tn_on.jpg);}
-.sso_wrap .logo_list .logos_green {background-image:url(/images/pc/logos_green.jpg);}
-.sso_wrap .logo_list .logos_green:hover {background-image:url(/images/pc/logos_green_on.jpg);}
-.sso_wrap .logo_list .logos_monit {background-image:url(/images/pc/logos_monit.jpg);}
-.sso_wrap .logo_list .logos_monit:hover{background-image:url(/images/pc/logos_monit_on.jpg);}
+.sso_wrap .logo_list .logos_momq {background-image:url(../images/pc/logos_momq.jpg);}
+.sso_wrap .logo_list .logos_momq:hover {background-image:url(../images/pc/logos_momq_on.jpg);}
+.sso_wrap .logo_list .logos_ykbrand {background-image:url(../images/pc/logos_ykbrand.jpg);}
+.sso_wrap .logo_list .logos_ykbrand:hover {background-image:url(../images/pc/logos_ykbrand_on.jpg);}
+.sso_wrap .logo_list .logos_huggies {background-image:url(../images/pc/logos_huggies.jpg);}
+.sso_wrap .logo_list .logos_huggies:hover {background-image:url(../images/pc/logos_huggies_on.jpg);}
+.sso_wrap .logo_list .logos_gnight {background-image:url(../images/pc/logos_gnight.jpg);}
+.sso_wrap .logo_list .logos_gnight:hover {background-image:url(../images/pc/logos_gnight_on.jpg);}
+.sso_wrap .logo_list .logos_white {background-image:url(../images/pc/logos_white.jpg);}
+.sso_wrap .logo_list .logos_white:hover {background-image:url(../images/pc/logos_white_on.jpg);}
+.sso_wrap .logo_list .logos_good {background-image:url(../images/pc/logos_good.jpg);}
+.sso_wrap .logo_list .logos_good:hover {background-image:url(../images/pc/logos_good_on.jpg);}
+.sso_wrap .logo_list .logos_lanature {background-image:url(../images/pc/logos_lanature.jpg);}
+.sso_wrap .logo_list .logos_lanature:hover {background-image:url(../images/pc/logos_lanature_on.jpg);}
+.sso_wrap .logo_list .logos_kleenex {background-image:url(../images/pc/logos_kleenex.jpg);}
+.sso_wrap .logo_list .logos_kleenex:hover {background-image:url(../images/pc/logos_kleenex_on.jpg);}
+.sso_wrap .logo_list .logos_scott {background-image:url(../images/pc/logos_scott.jpg);}
+.sso_wrap .logo_list .logos_scott:hover {background-image:url(../images/pc/logos_scott_on.jpg);}
+.sso_wrap .logo_list .logos_my {background-image:url(../images/pc/logos_my.jpg);}
+.sso_wrap .logo_list .logos_my:hover {background-image:url(../images/pc/logos_my_on.jpg);}
+.sso_wrap .logo_list .logos_depand {background-image:url(../images/pc/logos_depand.jpg);}
+.sso_wrap .logo_list .logos_depand:hover {background-image:url(../images/pc/logos_depand_on.jpg);}
+.sso_wrap .logo_list .logos_tn {background-image:url(../images/pc/logos_tn.jpg);}
+.sso_wrap .logo_list .logos_tn:hover {background-image:url(../images/pc/logos_tn_on.jpg);}
+.sso_wrap .logo_list .logos_green {background-image:url(../images/pc/logos_green.jpg);}
+.sso_wrap .logo_list .logos_green:hover {background-image:url(../images/pc/logos_green_on.jpg);}
+.sso_wrap .logo_list .logos_monit {background-image:url(../images/pc/logos_monit.jpg);}
+.sso_wrap .logo_list .logos_monit:hover{background-image:url(../images/pc/logos_monit_on.jpg);}
 .errtx {display: block;left:0;color:#e63c4f;font-size: 11px;}
 .join_form {margin-top:25px;}
 .input_frm {margin-bottom:35px;}
@@ -287,7 +287,7 @@ p.help:before {
 .childadd .addbtnwrap .addlist li:hover {background-color: #f4f6f8;}
 .childadd .btn_areadd {
 	position: relative;display: inline-block;width:115px;padding:0 10px 0 30px;height:33px;line-height:31px;color:#222;border:1px solid #dddddd;text-align: right;font-size: 12px;
-	background:url(/images/pc/ico_plus.gif) no-repeat left 15px center;background-color:#fff;z-index: 10;
+	background:url(../images/pc/ico_plus.gif) no-repeat left 15px center;background-color:#fff;z-index: 10;
 }
 
 .errotxt {padding:6px 0;color:#e63c4f;font-size: 12px;font-weight: 300;}
@@ -431,7 +431,7 @@ p, span, li{word-break: keep-all;}
 .sso_wrap .com_benefit .helpwrap .btnwrap .btn { margin-bottom: 0; background-color: #009fe3; color: #fff; }
 /* 20201005 e */
 /* 20201208 s */
-.sso_head .row .child-logo-mygf { position: absolute; right: 0; top: 5px; width: 90px; height: 52px; background-image: url(/images/mobile/logo_moon.png); background-size: 50px; background-position: center center; background-repeat: no-repeat; }
+.sso_head .row .child-logo-mygf { position: absolute; right: 0; top: 5px; width: 90px; height: 52px; background-image: url(../images/mobile/logo_moon.png); background-size: 50px; background-position: center center; background-repeat: no-repeat; }
 /* 20201208 e */
 
 /* 20210315 s */
@@ -439,8 +439,8 @@ p, span, li{word-break: keep-all;}
 .masking input { padding: 8px 40px 8px 0 !important; }
 .masking .btn_masking { position: absolute; top: 30%; right: 2px; background-color: unset; border-color: transparent; }
 .masking [class*='ic_'] { width: 20px; height: 18px; display: inline-block; background-size: cover; background-position: 0 center; background-repeat: no-repeat; }
-.masking .ic_hide { background-image: url(/images/mobile/icon_hide.png); }
-.masking .ic_show { background-image: url(/images/mobile/icon_show.png); }
+.masking .ic_hide { background-image: url(../images/mobile/icon_hide.png); }
+.masking .ic_show { background-image: url(../images/mobile/icon_show.png); }
 /* 20210315 e */
 /* 210705 s */
 .sso_wrap .join_wrap span.tooltip { z-index: 99; position: absolute; top: -7px; left: 105px; max-width: 185px; min-width: 140px; width: -webkit-max-content; width: -moz-max-content; width: max-content; background-color: #009fe3; border-radius: 10px; padding: 10px; color: #fff; font-style: normal; font-size: 10px; font-weight: 350; }
@@ -481,15 +481,15 @@ p, span, li{word-break: keep-all;}
 
 .sns_login .bt_kakao { background-color: #fff311; color: #381e1f; }
 
-.sns_login .bt_kakao > i { background-image: url(/images/bt-kakao.jpg); background-color: #fff311; }
+.sns_login .bt_kakao > i { background-image: url(../images/bt-kakao.jpg); background-color: #fff311; }
 
 .sns_login .bt_naver { background-color: #00c73c; color: #fff; }
 
-.sns_login .bt_naver > i { background-image: url(/images/bt-naver.jpg); }
+.sns_login .bt_naver > i { background-image: url(../images/bt-naver.jpg); }
 
 .sns_login .bt_facebook { background-color: #3c5a9b; color: #fff; }
 
-.sns_login .bt_facebook > i { background-image: url(/images/bt-facebook.jpg); }
+.sns_login .bt_facebook > i { background-image: url(../images/bt-facebook.jpg); }
 
 .join_form .terms_chk li.first label { font-weight: 500; }
 
@@ -509,7 +509,7 @@ p, span, li{word-break: keep-all;}
 
 .sso_wrap .join_wrap .btn_nrmal._kakao { margin-right: 0; background-color: #fff311; border-color: #fff311; color: #381e1f; text-align: center; }
 
-.sso_wrap .join_wrap .btn_nrmal._kakao i { display: inline-block; width: 23px; height: 23px; margin-right: 5px; margin-top: -5px; background-image: url(/images/bt-kakao.jpg); background-position: center center; background-repeat: no-repeat; background-size: 23px; vertical-align: middle; }
+.sso_wrap .join_wrap .btn_nrmal._kakao i { display: inline-block; width: 23px; height: 23px; margin-right: 5px; margin-top: -5px; background-image: url(../images/bt-kakao.jpg); background-position: center center; background-repeat: no-repeat; background-size: 23px; vertical-align: middle; }
 
 .sso_wrap .join_wrap .btn_nrmal._yk { color: #fff; background-color: #009fe3; }
 
@@ -589,9 +589,9 @@ p, span, li{word-break: keep-all;}
 
 .terms_agree_layer .btnwrap._sevaral .btn:first-child { margin-left: 0; }
 
-input[type="checkbox"] + label:before { background: url(/images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"] + label:before { background: url(../images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
 
-input[type="checkbox"]:checked + label:before { background: url(/images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"]:checked + label:before { background: url(../images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
 
 /** 2021 SSO Kakao thinkq e **/
 
@@ -602,51 +602,51 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 /** 20210928 카카오싱크 제작물 관련 수정 s **/
 .join_form.SSOkakao .terms_chk .btn_vw { bottom: unset; top: 3px; }
 
-.join_form .terms_chk li.last { padding-bottom: 15px; background: url(/images/mobile/dot.png) repeat-x center bottom; }
+.join_form .terms_chk li.last { padding-bottom: 15px; background: url(../images/mobile/dot.png) repeat-x center bottom; }
 
 .join_form .terms_chk li.li-onedepth { padding-left: 28px; }
 
 .join_form .terms_chk li.li-onedepth p.label { display: inline-block; font-size: 13px; font-weight: 400; cursor: pointer; margin-bottom: 15px; }
 
-input[type="checkbox"] + label:before { background: url(/images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"] + label:before { background: url(../images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
 
-input[type="checkbox"]:checked + label:before { background: url(/images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"]:checked + label:before { background: url(../images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
 
 .layerbody .layerwrap { width: calc(100% - 40px); }
 
-.layerbody .layerwrap .btn_close { right: -10px; background-image: url(/images/mobile/btn_layclose.png); }
+.layerbody .layerwrap .btn_close { right: -10px; background-image: url(../images/mobile/btn_layclose.png); }
 
 /** 20210928 카카오싱크 제작물 관련 수정 e **/
 /** 20210928 카카오싱크 제작물 관련 수정 s **/
 .join_form.SSOkakao .terms_chk .btn_vw { bottom: unset; top: 3px; }
 
-.join_form .terms_chk li.last { padding-bottom: 15px; background: url(/images/mobile/dot.png) repeat-x center bottom; }
+.join_form .terms_chk li.last { padding-bottom: 15px; background: url(../images/mobile/dot.png) repeat-x center bottom; }
 
 .join_form .terms_chk li.li-onedepth { padding-left: 28px; }
 
 .join_form .terms_chk li.li-onedepth p.label { display: inline-block; font-size: 13px; font-weight: 400; cursor: pointer; margin-bottom: 15px; }
 
-input[type="checkbox"] + label:before { background: url(/images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"] + label:before { background: url(../images/mobile/ico_check_off.png) no-repeat 0 0; background-size: 20px; }
 
-input[type="checkbox"]:checked + label:before { background: url(/images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
+input[type="checkbox"]:checked + label:before { background: url(../images/mobile/ico_check_on.png) no-repeat 0 0; background-size: 20px; }
 
 .layerbody .layerwrap { width: calc(100% - 40px); }
 
-.layerbody .layerwrap .btn_close { right: -10px; background-image: url(/images/mobile/btn_layclose.png); }
+.layerbody .layerwrap .btn_close { right: -10px; background-image: url(../images/mobile/btn_layclose.png); }
 
 /** 20210928 카카오싱크 제작물 관련 수정 e **/
 /** 20211015 s **/
-.ykpluslogo { position: absolute; right: 20px; top: 24px; width: 56px; height: 12px; background-size: 56px; background-position: 0 0; background-repeat: no-repeat; background-image: url(/images/mobile/ykplus-logo.png); }
+.ykpluslogo { position: absolute; right: 20px; top: 24px; width: 56px; height: 12px; background-size: 56px; background-position: 0 0; background-repeat: no-repeat; background-image: url(../images/mobile/ykplus-logo.png); }
 
 .a11y { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
-.sso_wrap .logo_list .logos_ykplus { background-image: url(/images/mobile/logos_ykplus.gif); }
+.sso_wrap .logo_list .logos_ykplus { background-image: url(../images/mobile/logos_ykplus.gif); }
 
-.sso_wrap .logo_list .logos_ykplus:hover { background-image: url(/images/mobile/logos_ykplus_on.gif); }
+.sso_wrap .logo_list .logos_ykplus:hover { background-image: url(../images/mobile/logos_ykplus_on.gif); }
 
-.sso_wrap .logo_list .logos_dal { background-image: url(/images/mobile/logos_dal.gif); }
+.sso_wrap .logo_list .logos_dal { background-image: url(../images/mobile/logos_dal.gif); }
 
-.sso_wrap .logo_list .logos_dal:hover { background-image: url(/images/mobile/logos_dal_on.gif); }
+.sso_wrap .logo_list .logos_dal:hover { background-image: url(../images/mobile/logos_dal_on.gif); }
 
 .join_wrap .com_alink { margin-top: 45px; }
 
@@ -654,13 +654,13 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .sso_wrap .join_wrap > h2.h2_ti { margin-bottom: 40px; }
 
-.sso_wrap .logo_list .logos_ykplus { background-image: url(/images/mobile/logos_ykplus.gif); }
+.sso_wrap .logo_list .logos_ykplus { background-image: url(../images/mobile/logos_ykplus.gif); }
 
-.sso_wrap .logo_list .logos_ykplus:hover { background-image: url(/images/mobile/logos_ykplus_on.gif); }
+.sso_wrap .logo_list .logos_ykplus:hover { background-image: url(../images/mobile/logos_ykplus_on.gif); }
 
-.sso_wrap .logo_list .logos_dal { background-image: url(/images/mobile/logos_dal.gif); }
+.sso_wrap .logo_list .logos_dal { background-image: url(../images/mobile/logos_dal.gif); }
 
-.sso_wrap .logo_list .logos_dal:hover { background-image: url(/images/mobile/logos_dal_on.gif); }
+.sso_wrap .logo_list .logos_dal:hover { background-image: url(../images/mobile/logos_dal_on.gif); }
 
 .join_form .input_frm .put.email { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -748,9 +748,9 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .facility_addr_layer .addr_table .pagination .btn { border: 0; }
 
-.sso_intro .content_wrap .logo_list .logos_dal { background-image: url(/images/mobile/logos_dal_on.gif); }
+.sso_intro .content_wrap .logo_list .logos_dal { background-image: url(../images/mobile/logos_dal_on.gif); }
 
-.sso_intro .content_wrap .logo_list .logos_ykplus { background-image: url(/images/mobile/logos_ykplus_on.gif); }
+.sso_intro .content_wrap .logo_list .logos_ykplus { background-image: url(../images/mobile/logos_ykplus_on.gif); }
 
 /** 20211015 e **/
 /** 20211021 s **/
@@ -775,11 +775,11 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .join_wrap._kakao .btn_foo .btn.btn_next { margin-top: 25px; }
 
-.join_wrap._kakao .logos_momq { background-image: url(/images/mobile/logos_momq_on.jpg); }
+.join_wrap._kakao .logos_momq { background-image: url(../images/mobile/logos_momq_on.jpg); }
 
-.join_wrap._kakao .logos_ykbrand { background-image: url(/images/mobile/logos_ykbrand_on.jpg); }
+.join_wrap._kakao .logos_ykbrand { background-image: url(../images/mobile/logos_ykbrand_on.jpg); }
 
-.join_wrap._kakao .logos_dal { background-image: url(/images/mobile/logos_dal_on.gif); }
+.join_wrap._kakao .logos_dal { background-image: url(../images/mobile/logos_dal_on.gif); }
 
 .join_wrap._kakao .recom .tit { font-size: 20px; font-weight: 500; margin-bottom: 20px; }
 
@@ -803,9 +803,9 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 /** 20211022 s **/
 .sns_login > p a._gray { color: #888; background-color: #f1f3f4; }
 
-.sns_login > p a._gray.bt_naver i { background-size: 15px !important; background-image: url(/images/mobile/ico_naver.png); }
+.sns_login > p a._gray.bt_naver i { background-size: 15px !important; background-image: url(../images/mobile/ico_naver.png); }
 
-.sns_login > p a._gray.bt_facebook i { background-size: 8px !important; background-image: url(/images/mobile/ico_facebook.png); }
+.sns_login > p a._gray.bt_facebook i { background-size: 8px !important; background-image: url(../images/mobile/ico_facebook.png); }
 
 /** 20211022 e **/
 /** 20211028 s **/
@@ -856,7 +856,7 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .sso_wrap .join_wrap._kakao .etc_frm .select_chk .esse i.tag { display: inline-block; margin-right: 10px; padding: 2px 8px 3px; font-style: normal; border: 2px solid #009fe3; }
 
-.sso_wrap .join_wrap._kakao .terms_chk._child { padding-top: 30px; background: url(/images/mobile/dot.png) repeat-x center top; margin-top: 30px; margin-bottom: 0px; }
+.sso_wrap .join_wrap._kakao .terms_chk._child { padding-top: 30px; background: url(../images/mobile/dot.png) repeat-x center top; margin-top: 30px; margin-bottom: 0px; }
 
 .sso_wrap .join_wrap._kakao .terms_chk li label { display: -webkit-box; display: -ms-flexbox; display: flex; color: #000; }
 
@@ -910,7 +910,7 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .sso_wrap .join_wrap._kakao .childadd .select_chk { margin: 0; }
 
-.sso_wrap .join_wrap._kakao .childadd .btn_areadd { background: url(/images/mobile/ico_plus.gif) no-repeat left 15px center; }
+.sso_wrap .join_wrap._kakao .childadd .btn_areadd { background: url(../images/mobile/ico_plus.gif) no-repeat left 15px center; }
 
 .sso_wrap .helpwrap + .h2_ti { margin-top: 50px; }
 
@@ -956,7 +956,7 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .etc_frm p._kakao span { color: #000; font-size: 12px; font-weight: 400; }
 
-.etc_frm p._kakao .ico { position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 24px; height: 24px; padding-right: 30px; background-image: url(/images/mobile/logos_kakao.gif); background-position: center; background-repeat: no-repeat; background-size: 24px; }
+.etc_frm p._kakao .ico { position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 24px; height: 24px; padding-right: 30px; background-image: url(../images/mobile/logos_kakao.gif); background-position: center; background-repeat: no-repeat; background-size: 24px; }
 
 .etc_frm p._kakao .btn { position: absolute; right: 0; top: 0; background-color: #fff; }
 
@@ -974,9 +974,9 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .join_wrap .login_wrap .util a { cursor: pointer; text-decoration: underline; }
 
-.sso_head .row .brandlogo { background-image: url(/images/mobile/yklogototal.png); }
+.sso_head .row .brandlogo { background-image: url(../images/mobile/yklogototal.png); }
 
-.sso_head .row .child-logo-tdplus { width: 124px; height: 32px; background-image: url(/images/mobile/ykplus-logo.png); background-size: 110px; background-position-x: right; top: 15px; right: 20px; }
+.sso_head .row .child-logo-tdplus { width: 124px; height: 32px; background-image: url(../images/mobile/ykplus-logo.png); background-size: 110px; background-position-x: right; top: 15px; right: 20px; }
 
 .sso_wrap .login_wrap .btn_blue { line-height: 1; padding: 12.5px 10px; }
 
@@ -993,9 +993,9 @@ input[type="checkbox"]:checked + label:before { background: url(/images/mobile/i
 
 .join_wrap .login_wrap .util a { cursor: pointer; text-decoration: underline; }
 
-.sso_head .row .brandlogo { background-image: url(/images/mobile/yklogototal.png); }
+.sso_head .row .brandlogo { background-image: url(../images/mobile/yklogototal.png); }
 
-.sso_head .row .child-logo-tdplus { width: 124px; height: 32px; background-image: url(/images/mobile/ykplus-logo.png); background-size: 110px; background-position-x: right; top: 15px; right: 20px; }
+.sso_head .row .child-logo-tdplus { width: 124px; height: 32px; background-image: url(../images/mobile/ykplus-logo.png); background-size: 110px; background-position-x: right; top: 15px; right: 20px; }
 
 .sso_wrap .login_wrap .btn_blue { line-height: 1; padding: 12.5px 10px; }
 
@@ -1238,7 +1238,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 
 .my_wrap.leave .btnwrap.btn_foo { margin: 40px 0 0; }
 
-.yklogototal { position: absolute; left: 20px; top: 16px; width: 178px; height: 32px; background-image: url(/images/mobile/yklogototal.png) !important; background-size: 100%; background-position: 0 0; background-repeat: no-repeat; }
+.yklogototal { position: absolute; left: 20px; top: 16px; width: 178px; height: 32px; background-image: url(../images/mobile/yklogototal.png) !important; background-size: 100%; background-position: 0 0; background-repeat: no-repeat; }
 
 /* 20221109 E */
 /* 20230130 s */
@@ -1252,7 +1252,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 
 .sns_login > p a._gray.bt_naver i { background-size: 20px !important; }
 
-.sns_login > p .bt_kakao > i { background-image: url(/images/bt-kakao.png); }
+.sns_login > p .bt_kakao > i { background-image: url(../images/bt-kakao.png); }
 
 .login_wrap .util-member { margin-top: 60px; }
 

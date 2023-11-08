@@ -52,13 +52,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {
 input[type="radio"] + label:before,  input[type="checkbox"] + label:before {
 	content:''; display:inline-block; width:21px; height:21px; margin:-4px 8px 0 0; vertical-align:middle;
 }
-input[type="checkbox"] + label:before {background:url(/images/pc/ico_check_off.png) no-repeat 0 0;background-size:21px;}
+input[type="checkbox"] + label:before {background:url(../images/pc/ico_check_off.png) no-repeat 0 0;background-size:21px;}
 input[type="checkbox"]:checked + label:before {
-	background:url(/images/pc/ico_check_on.png) no-repeat 0 0;background-size:21px;
+	background:url(../images/pc/ico_check_on.png) no-repeat 0 0;background-size:21px;
 }
-input[type="radio"] + label:before {background:url(/images/pc/ico_check2_off.png) no-repeat 0 0;background-size:21px;}
+input[type="radio"] + label:before {background:url(../images/pc/ico_check2_off.png) no-repeat 0 0;background-size:21px;}
 input[type="radio"]:checked + label:before {
-	background:url(/images/pc/ico_check2_on.png) no-repeat 0 0;background-size:21px;
+	background:url(../images/pc/ico_check2_on.png) no-repeat 0 0;background-size:21px;
 }
 
 html,body { padding:0;margin:0;height: 100%; font-size: 14px;color:#000;background-color: #fff;}

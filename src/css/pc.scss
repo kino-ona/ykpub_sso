@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
-@import url("/css/reset_pc.css");
+// @import url("/css/reset_pc.css");
 
 /*size*/
 .pc-fix-w100 {
@@ -245,8 +245,8 @@ p.help:before {
   top: 24px;
   min-width: 222px;
   height: 32px;
-  /* background-image: url(/images/pc/ykbrand_logo.png); */
-  background-image: url(/images/pc/yklogototal.png);
+  /* background-image: url(../images/pc/ykbrand_logo.png); */
+  background-image: url(../images/pc/yklogototal.png);
   background-size: 222px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -267,7 +267,7 @@ p.help:before {
   top: 24px;
   width: 100px;
   height: 32px;
-  background-image: url(/images/pc/momq_logo.png);
+  background-image: url(../images/pc/momq_logo.png);
   background-size: 100px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -275,20 +275,20 @@ p.help:before {
 
 .sso_head .row .child-logo-tdplus {
   width: 124px;
-  background-image: url(/images/pc/tdplus_logo.png);
+  background-image: url(../images/pc/tdplus_logo.png);
   background-size: 124px;
 }
 
 .sso_head .row .child-logo-monit {
   width: 124px;
-  background-image: url(/images/pc/logo_monit.jpg);
+  background-image: url(../images/pc/logo_monit.jpg);
   background-size: 124px;
 }
 
 .sso_head .row .child-logo-mygf {
   width: 90px;
   height: 30px;
-  background-image: url(/images/pc/logo_feelgood.jpg);
+  background-image: url(../images/pc/logo_feelgood.jpg);
   background-size: 90px;
 }
 
@@ -398,18 +398,18 @@ p.help:before {
 }
 
 .sns_login .bt_naver>i {
-  background-image: url(/images/ico_naver.png);
+  background-image: url(../images/ico_naver.png);
   background-size: 23px;
 }
 
 .sns_login .bt_facebook>i {
   width: 15px;
-  background-image: url(/images/ico_facebook.png);
+  background-image: url(../images/ico_facebook.png);
   background-size: 11px;
 }
 
 .sns_login .bt_kakao>i {
-  background-image: url(/images/ico_kakao.png);
+  background-image: url(../images/ico_kakao.png);
   background-size: 30px;
 }
 
@@ -619,123 +619,123 @@ p.help:before {
 }
 
 .sso_wrap .logo_list .logos_momq {
-  background-image: url(/images/pc/logos_momq.jpg);
+  background-image: url(../images/pc/logos_momq.jpg);
 }
 
 .sso_wrap .logo_list .logos_momq:hover {
-  background-image: url(/images/pc/logos_momq_on.jpg);
+  background-image: url(../images/pc/logos_momq_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_ykbrand {
-  background-image: url(/images/pc/logos_ykbrand.jpg);
+  background-image: url(../images/pc/logos_ykbrand.jpg);
 }
 
 .sso_wrap .logo_list .logos_ykbrand:hover {
-  background-image: url(/images/pc/logos_ykbrand_on.jpg);
+  background-image: url(../images/pc/logos_ykbrand_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_huggies {
-  background-image: url(/images/pc/logos_huggies.jpg);
+  background-image: url(../images/pc/logos_huggies.jpg);
 }
 
 .sso_wrap .logo_list .logos_huggies:hover {
-  background-image: url(/images/pc/logos_huggies_on.jpg);
+  background-image: url(../images/pc/logos_huggies_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_gnight {
-  background-image: url(/images/pc/logos_gnight.jpg);
+  background-image: url(../images/pc/logos_gnight.jpg);
 }
 
 .sso_wrap .logo_list .logos_gnight:hover {
-  background-image: url(/images/pc/logos_gnight_on.jpg);
+  background-image: url(../images/pc/logos_gnight_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_white {
-  background-image: url(/images/pc/logos_white.jpg);
+  background-image: url(../images/pc/logos_white.jpg);
 }
 
 .sso_wrap .logo_list .logos_white:hover {
-  background-image: url(/images/pc/logos_white_on.jpg);
+  background-image: url(../images/pc/logos_white_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_good {
-  background-image: url(/images/pc/logos_good.jpg);
+  background-image: url(../images/pc/logos_good.jpg);
 }
 
 .sso_wrap .logo_list .logos_good:hover {
-  background-image: url(/images/pc/logos_good_on.jpg);
+  background-image: url(../images/pc/logos_good_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_lanature {
-  background-image: url(/images/pc/logos_lanature.jpg);
+  background-image: url(../images/pc/logos_lanature.jpg);
 }
 
 .sso_wrap .logo_list .logos_lanature:hover {
-  background-image: url(/images/pc/logos_lanature_on.jpg);
+  background-image: url(../images/pc/logos_lanature_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_kleenex {
-  background-image: url(/images/pc/logos_kleenex.jpg);
+  background-image: url(../images/pc/logos_kleenex.jpg);
 }
 
 .sso_wrap .logo_list .logos_kleenex:hover {
-  background-image: url(/images/pc/logos_kleenex_on.jpg);
+  background-image: url(../images/pc/logos_kleenex_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_scott {
-  background-image: url(/images/pc/logos_scott.jpg);
+  background-image: url(../images/pc/logos_scott.jpg);
 }
 
 .sso_wrap .logo_list .logos_scott:hover {
-  background-image: url(/images/pc/logos_scott_on.jpg);
+  background-image: url(../images/pc/logos_scott_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_my {
-  background-image: url(/images/pc/logos_my.jpg);
+  background-image: url(../images/pc/logos_my.jpg);
 }
 
 .sso_wrap .logo_list .logos_my:hover {
-  background-image: url(/images/pc/logos_my_on.jpg);
+  background-image: url(../images/pc/logos_my_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_depand {
-  background-image: url(/images/pc/logos_depand.jpg);
+  background-image: url(../images/pc/logos_depand.jpg);
 }
 
 .sso_wrap .logo_list .logos_depand:hover {
-  background-image: url(/images/pc/logos_depand_on.jpg);
+  background-image: url(../images/pc/logos_depand_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_tn {
-  background-image: url(/images/pc/logos_tn.jpg);
+  background-image: url(../images/pc/logos_tn.jpg);
 }
 
 .sso_wrap .logo_list .logos_tn:hover {
-  background-image: url(/images/pc/logos_tn_on.jpg);
+  background-image: url(../images/pc/logos_tn_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_green {
-  background-image: url(/images/pc/logos_green.jpg);
+  background-image: url(../images/pc/logos_green.jpg);
 }
 
 .sso_wrap .logo_list .logos_green:hover {
-  background-image: url(/images/pc/logos_green_on.jpg);
+  background-image: url(../images/pc/logos_green_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_monit {
-  background-image: url(/images/pc/logos_monit.jpg);
+  background-image: url(../images/pc/logos_monit.jpg);
 }
 
 .sso_wrap .logo_list .logos_monit:hover {
-  background-image: url(/images/pc/logos_monit_on.jpg);
+  background-image: url(../images/pc/logos_monit_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_dal {
-  background-image: url(/images/pc/logos_dal_on.jpg);
+  background-image: url(../images/pc/logos_dal_on.jpg);
 }
 
 .sso_wrap .logo_list .logos_dal:hover {
-  background-image: url(/images/pc/logos_dal_on.jpg);
+  background-image: url(../images/pc/logos_dal_on.jpg);
 }
 
 .join_form {
@@ -875,7 +875,7 @@ p.help:before {
 
 .join_form .terms_chk li.first {
   padding-bottom: 25px;
-  background: url(/images/pc/dot.png) repeat-x center bottom;
+  background: url(../images/pc/dot.png) repeat-x center bottom;
 }
 
 .join_form .terms_chk li.first label {
@@ -1052,7 +1052,7 @@ p.help:before {
   color: #222;
   border: 1px solid #dddddd;
   text-align: right;
-  background: url(/images/pc/ico_plus.gif) no-repeat left 15px center;
+  background: url(../images/pc/ico_plus.gif) no-repeat left 15px center;
   background-color: #fff;
   z-index: 10;
 }
@@ -1472,7 +1472,7 @@ p.desc {
   top: 40px;
   width: 200px;
   height: 25px;
-  background: url(/images/main/index_logo.png) no-repeat 0 0;
+  background: url(../images/main/index_logo.png) no-repeat 0 0;
   background-size: 183px;
 }
 
@@ -1486,7 +1486,7 @@ p.desc {
 .sso_intro .toparea {
   height: 510px;
   margin: 0 auto 75px;
-  background: url(/images/main/sso_introbg.png) no-repeat center top;
+  background: url(../images/main/sso_introbg.png) no-repeat center top;
   background-size: cover;
 }
 
@@ -1524,7 +1524,7 @@ p.desc {
   top: 0;
   width: 485px;
   height: 581px;
-  background: url(/images/main/ssointr_img.png) no-repeat right top;
+  background: url(../images/main/ssointr_img.png) no-repeat right top;
   background-size: 484px;
 }
 
@@ -1562,59 +1562,59 @@ p.desc {
 }
 
 .sso_intro .logo_list .logos_momq {
-  background-image: url(/images/pc/logos_momq_on.jpg);
+  background-image: url(../images/pc/logos_momq_on.jpg);
 }
 
 .sso_intro .logo_list .logos_ykbrand {
-  background-image: url(/images/pc/logos_ykbrand_on.jpg);
+  background-image: url(../images/pc/logos_ykbrand_on.jpg);
 }
 
 .sso_intro .logo_list .logos_huggies {
-  background-image: url(/images/pc/logos_huggies_on.jpg);
+  background-image: url(../images/pc/logos_huggies_on.jpg);
 }
 
 .sso_intro .logo_list .logos_gnight {
-  background-image: url(/images/pc/logos_gnight_on.jpg);
+  background-image: url(../images/pc/logos_gnight_on.jpg);
 }
 
 .sso_intro .logo_list .logos_white {
-  background-image: url(/images/pc/logos_white_on.jpg);
+  background-image: url(../images/pc/logos_white_on.jpg);
 }
 
 .sso_intro .logo_list .logos_good {
-  background-image: url(/images/pc/logos_good_on.jpg);
+  background-image: url(../images/pc/logos_good_on.jpg);
 }
 
 .sso_intro .logo_list .logos_lanature {
-  background-image: url(/images/pc/logos_lanature_on.jpg);
+  background-image: url(../images/pc/logos_lanature_on.jpg);
 }
 
 .sso_intro .logo_list .logos_kleenex {
-  background-image: url(/images/pc/logos_kleenex_on.jpg);
+  background-image: url(../images/pc/logos_kleenex_on.jpg);
 }
 
 .sso_intro .logo_list .logos_scott {
-  background-image: url(/images/pc/logos_scott_on.jpg);
+  background-image: url(../images/pc/logos_scott_on.jpg);
 }
 
 .sso_intro .logo_list .logos_my {
-  background-image: url(/images/pc/logos_my_on.jpg);
+  background-image: url(../images/pc/logos_my_on.jpg);
 }
 
 .sso_intro .logo_list .logos_depand {
-  background-image: url(/images/pc/logos_depand_on.jpg);
+  background-image: url(../images/pc/logos_depand_on.jpg);
 }
 
 .sso_intro .logo_list .logos_tn {
-  background-image: url(/images/pc/logos_tn_on.jpg);
+  background-image: url(../images/pc/logos_tn_on.jpg);
 }
 
 .sso_intro .logo_list .logos_green {
-  background-image: url(/images/pc/logos_green_on.jpg);
+  background-image: url(../images/pc/logos_green_on.jpg);
 }
 
 .sso_intro .logo_list .logos_monit {
-  background-image: url(/images/pc/logos_monit_on.jpg);
+  background-image: url(../images/pc/logos_monit_on.jpg);
 }
 
 .sso_intro .momq_benef {
@@ -1630,7 +1630,7 @@ p.desc {
   display: block;
   width: 105px;
   height: 40px;
-  background: url(/images/main/logo_momq.png) no-repeat center top;
+  background: url(../images/main/logo_momq.png) no-repeat center top;
   background-size: 103px;
   margin: 0 auto 15px;
 }
@@ -2077,7 +2077,7 @@ a {
 /* 20201005 s */
 .join_form .terms_chk._child {
   padding-top: 30px;
-  background: url(/images/pc/dot.png) repeat-x center top;
+  background: url(../images/pc/dot.png) repeat-x center top;
   margin-top: 30px;
   margin-bottom: 0px;
 }
@@ -2142,7 +2142,7 @@ a {
   top: 14px;
   width: 100px;
   height: 52px;
-  background-image: url(/images/pc/logo_moon.png);
+  background-image: url(../images/pc/logo_moon.png);
   background-size: 80px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2180,11 +2180,11 @@ a {
 }
 
 .masking .ic_hide {
-  background-image: url(/images/pc/icon_hide.png);
+  background-image: url(../images/pc/icon_hide.png);
 }
 
 .masking .ic_show {
-  background-image: url(/images/pc/icon_show.png);
+  background-image: url(../images/pc/icon_show.png);
 }
 
 /* 20210315 e */
@@ -2216,7 +2216,7 @@ a {
 .sso_intro .toparea .row .fig {
   width: 797px;
   right: 0;
-  background: url(/images/pc/ssointr_img_210414.png) no-repeat top right;
+  background: url(../images/pc/ssointr_img_210414.png) no-repeat top right;
   background-size: 797px;
 }
 
@@ -2587,7 +2587,7 @@ footer.renewfoo .familysite select {
 }
 
 .sns_login .bt_kakao>i {
-  background-image: url(/images/bt-kakao.jpg);
+  background-image: url(../images/bt-kakao.jpg);
   background-color: #fff311;
 }
 
@@ -2597,7 +2597,7 @@ footer.renewfoo .familysite select {
 }
 
 .sns_login .bt_naver>i {
-  background-image: url(/images/bt-naver.jpg);
+  background-image: url(../images/bt-naver.jpg);
 }
 
 .sns_login .bt_facebook {
@@ -2606,7 +2606,7 @@ footer.renewfoo .familysite select {
 }
 
 .sns_login .bt_facebook>i {
-  background-image: url(/images/bt-facebook.jpg);
+  background-image: url(../images/bt-facebook.jpg);
 }
 
 .sso_wrap .join_wrap .btn_nrmal {
@@ -2624,7 +2624,7 @@ footer.renewfoo .familysite select {
   padding-left: 40px;
   margin-right: 0;
   background-color: #fff311;
-  background-image: url(/images/bt-kakao.jpg);
+  background-image: url(../images/bt-kakao.jpg);
   background-position: left 25px center;
   background-repeat: no-repeat;
   border-color: #fff311;
@@ -2852,7 +2852,7 @@ p.help:before {
 
 .join_form .terms_chk li.last {
   padding-bottom: 25px;
-  background: url(/images/pc/dot.png) repeat-x center bottom;
+  background: url(../images/pc/dot.png) repeat-x center bottom;
 }
 
 .join_form .terms_chk li.li-onedepth {
@@ -2881,27 +2881,27 @@ p.help:before {
 }
 
 .sso_wrap .logo_list .logos_ykplus {
-  background-image: url(/images/pc/logos_ykplus.gif);
+  background-image: url(../images/pc/logos_ykplus.gif);
 }
 
 .sso_wrap .logo_list .logos_ykplus:hover {
-  background-image: url(/images/pc/logos_ykplus_on.gif);
+  background-image: url(../images/pc/logos_ykplus_on.gif);
 }
 
 .sso_intro section .logo_list .logos_ykplus {
-  background-image: url(/images/pc/logos_ykplus_on.gif);
+  background-image: url(../images/pc/logos_ykplus_on.gif);
 }
 
 .sso_wrap .logo_list .logos_dal {
-  background-image: url(/images/pc/logos_dal.gif);
+  background-image: url(../images/pc/logos_dal.gif);
 }
 
 .sso_wrap .logo_list .logos_dal:hover {
-  background-image: url(/images/pc/logos_dal_on.gif);
+  background-image: url(../images/pc/logos_dal_on.gif);
 }
 
 .sso_intro section .logo_list .logos_dal {
-  background-image: url(/images/pc/logos_dal_on.gif);
+  background-image: url(../images/pc/logos_dal_on.gif);
 }
 
 .join_wrap .com_alink {
@@ -2926,7 +2926,7 @@ p.help:before {
   background-size: 100px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-image: url(/images/pc/ykplus-logo.png);
+  background-image: url(../images/pc/ykplus-logo.png);
 }
 
 .sso_wrap .join_wrap>h2.h2_ti {
@@ -2953,7 +2953,7 @@ p.help:before {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url(/images/pc/join01-titletip.gif);
+  background-image: url(../images/pc/join01-titletip.gif);
 }
 
 .join_wrap._kakao .btn_foo {
@@ -3060,7 +3060,7 @@ p.help:before {
 }
 
 .layerwrap .btn_close {
-  background: url(/images/pc/btn_layclose.png) no-repeat 0 0;
+  background: url(../images/pc/btn_layclose.png) no-repeat 0 0;
 }
 
 #terms_agree_layer .layerwrap {
@@ -3085,12 +3085,12 @@ p.help:before {
 
 .sns_login>p a._gray.bt_naver i {
   background-size: 23px !important;
-  background-image: url(/images/pc/ico_naver.png);
+  background-image: url(../images/pc/ico_naver.png);
 }
 
 .sns_login>p a._gray.bt_facebook i {
   background-size: 11px !important;
-  background-image: url(/images/pc/ico_facebook.png);
+  background-image: url(../images/pc/ico_facebook.png);
 }
 
 /** 20211023 e **/
@@ -3156,12 +3156,12 @@ p.help:before {
 
 .sns_login>p a._gray.bt_naver i {
   background-size: 23px !important;
-  background-image: url(/images/pc/ico_naver.png);
+  background-image: url(../images/pc/ico_naver.png);
 }
 
 .sns_login>p a._gray.bt_facebook i {
   background-size: 11px !important;
-  background-image: url(/images/pc/ico_facebook.png);
+  background-image: url(../images/pc/ico_facebook.png);
 }
 
 /** 20211022 e **/
@@ -3228,7 +3228,7 @@ p.help:before {
 
 .sso_wrap .join_wrap._kakao .terms_chk._child {
   padding-top: 30px;
-  background: url(/images/pc/dot.png) repeat-x center top;
+  background: url(../images/pc/dot.png) repeat-x center top;
   margin-top: 30px;
   margin-bottom: 0px;
 }
@@ -3384,7 +3384,7 @@ p.help:before {
   width: 24px;
   height: 24px;
   padding-right: 30px;
-  background-image: url(/images/pc/logos_kakao.gif);
+  background-image: url(../images/pc/logos_kakao.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px;
@@ -3434,13 +3434,13 @@ p.help:before {
 }
 
 .sso_head .row .brandlogo {
-  background-image: url(/images/pc/yklogototal.png);
+  background-image: url(../images/pc/yklogototal.png);
 }
 
 .sso_head .row .child-logo-tdplus {
   width: 124px;
   height: 32px;
-  background-image: url(/images/pc/ykplus-logo.png);
+  background-image: url(../images/pc/ykplus-logo.png);
   background-size: 110px;
   background-position-x: right;
   right: 20px;
@@ -3521,7 +3521,7 @@ p.help:before {
   width: 24px;
   height: 24px;
   padding-right: 30px;
-  background-image: url(/images/pc/logos_kakao.gif);
+  background-image: url(../images/pc/logos_kakao.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px;
@@ -3571,13 +3571,13 @@ p.help:before {
 }
 
 .sso_head .row .brandlogo {
-  background-image: url(/images/pc/yklogototal.png);
+  background-image: url(../images/pc/yklogototal.png);
 }
 
 .sso_head .row .child-logo-tdplus {
   width: 124px;
   height: 32px;
-  background-image: url(/images/pc/ykplus-logo.png);
+  background-image: url(../images/pc/ykplus-logo.png);
   background-size: 110px;
   background-position-x: right;
   right: 20px;
@@ -3941,7 +3941,7 @@ p.help:before {
 
 .my_wrap.leave .reason .chk input[type="checkbox"] + label::before { content: ''; position: absolute; left: 0; top: 5px; }
 
-.yklogototal { position: absolute; left: 25px; top: 23px; width: 219px; height: 32px; background-size: 219px; background-position: 0 0; background-repeat: no-repeat; background-image: url(/images/pc/yklogototal.png) !important; }
+.yklogototal { position: absolute; left: 25px; top: 23px; width: 219px; height: 32px; background-size: 219px; background-position: 0 0; background-repeat: no-repeat; background-image: url(../images/pc/yklogototal.png) !important; }
 
 .yklogototal span.txt { display: none; }
 
@@ -3949,11 +3949,11 @@ p.help:before {
 /* 20221111 s */
 .sso_intro { max-width: 1400px; }
 
-.sso_intro .logo { background-image: url(/images/pc/index_logo2022.png); }
+.sso_intro .logo { background-image: url(../images/pc/index_logo2022.png); }
 
 .sso_intro .toparea { max-width: 1400px; }
 
-.sso_intro .toparea .row .fig { top: 110px; width: 642px; height: 597px; background-image: url(/images/pc/ssointro2022.png); background-size: contain; }
+.sso_intro .toparea .row .fig { top: 110px; width: 642px; height: 597px; background-image: url(../images/pc/ssointro2022.png); background-size: contain; }
 
 .sso_intro .toparea .row .desc .detail { margin-top: 30px; }
 
@@ -3963,9 +3963,9 @@ p.help:before {
 
 .sso_intro section .history li .desc { padding: 0; }
 
-.sso_intro .logo_list .logos_huggies { background-image: url(/images/pc/logo_huggies.png); }
+.sso_intro .logo_list .logos_huggies { background-image: url(../images/pc/logo_huggies.png); }
 
-.sso_intro .logo_list .logos_gnight { background-image: url(/images/pc/logo_gnight.png); }
+.sso_intro .logo_list .logos_gnight { background-image: url(../images/pc/logo_gnight.png); }
 
 /* 20221111 e */
 
@@ -3980,7 +3980,7 @@ p.help:before {
 
 .sns_login > p a._gray.bt_naver i { background-size: 30px !important; }
 
-.sns_login > p .bt_kakao > i { background-image: url(/images/bt-kakao.png); }
+.sns_login > p .bt_kakao > i { background-image: url(../images/bt-kakao.png); }
 
 .login_wrap .util-member { margin-top: 60px; }
 
