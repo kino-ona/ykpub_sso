@@ -1357,6 +1357,8 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 			transition: opacity 300ms ease 0s;
 			transform: translateX(-50%);
 			z-index: 10;
+			display: flex;
+			gap:7px;
 		}
 		.swiper-pagination.swiper-pagination-hidden {
 			opacity: 0;

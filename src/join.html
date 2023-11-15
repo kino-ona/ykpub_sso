@@ -20,7 +20,7 @@
 			<div class="row">
 				<div class="join_wrap">
 					<h1><span>유한킴벌리 통합회원</span>가입을 환영합니다.</h1>
-					<p class="desc">유한킴벌리 통합회원 계정 하나로 맘큐 및 유한킴벌리 브랜드의 다양한 서비스를 이용할 수 있습니다.</p>
+					<p class="desc">유한킴벌리 통합회원 계정 하나로 맘큐, 오늘플러스 및 유한킴벌리 브랜드의 다양한 서비스를 이용할 수 있습니다.</p>
 					<div class="btnwrap">
 						<a href="javascript:;" class="btn btn_nrmal auth_popup _pass _yk">본인인증으로 회원가입</a>
 						<a href="javascript:;" data-hash="#terms_agree_layer" class="btn btn_nrmal auth_popup _kakao" onclick="loginWithKakao()">
@@ -32,14 +32,28 @@
 					<!-- 202311 회원가입 개선 : 혜택 안내 //-->
 					<div class="com_benefit">
 						<h2 class="h2_ti">회원 혜택</h2>
-						<p class="desc">momQ 최초 가입 시 1만 7천원 상당 즉시 할인 혜택</p>
-						<div class="coupon-swipe swiper-container">
+						<!-- <p class="desc">momQ 최초 가입 시 1만 7천원 상당 즉시 할인 혜택</p> 삭제 -->
+						<!-- 오늘플러스용 쿠폰 //-->
+						<div class="coupon-swipe1 swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<img src="./images/coupon_01.png" alt="쿠폰이미지">
 								</div>
 								<div class="swiper-slide">
 									<img src="./images/coupon_02.png" alt="쿠폰이미지">
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+
+						<!-- 맘큐용 쿠폰 //-->
+						<div class="coupon-swipe2 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./images/mq_coupon_01.png" alt="쿠폰이미지">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/mq_coupon_02.png" alt="쿠폰이미지">
 								</div>
 							</div>
 							<div class="swiper-pagination"></div>
@@ -178,7 +192,7 @@
 
 			<script>
 				$(document).ready(function(){
-					var swiper = new Swiper('.coupon-swipe', {
+					var swiper = new Swiper('.coupon-swipe1', {
 						slidesPerView: 2,
 						spaceBetween: 20,
 						paginationClickable: true,
@@ -189,6 +203,25 @@
 							type: 'bullets',
 						},
 					});
+					var swiper = new Swiper('.coupon-swipe2', {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						paginationClickable: true,
+						keyboard: true,
+						speed: 400,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+						},
+					});
+					
+					if($('.swiper-pagination').length > 0) {
+						$('.swiper-pagination').each(function(index){
+							if($(this).find('.swiper-pagination-bullet').length < 2) {
+								$(this).hide();
+							}
+						});
+					}
 				});
 			</script>
 		</div>
