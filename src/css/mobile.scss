@@ -1273,34 +1273,13 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 		position: relative;
 	}
 	.tooltiptext {
-		width: 125px;
-		bottom: 150%;
-		left: 40%;
-		margin-left: -60px;
-		background-color: #159FE3;
-		color: #fff;
-		text-align: center;
-		border-radius: 5px;
-		padding: 5px 6px;
-	
-		position: absolute;
-		z-index: 1;
-		font-size: 13px;
-		font-weight: 300;
-		&::after {
-			content: " ";
-			position: absolute;
-			border-style: solid;
-			border-width: 5px;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-color: #159FE3 transparent transparent transparent;
-		}
-		
+		margin-left: -45px;
 	}
 }
 .sso_wrap {
+	.input_frm .email .put.full .email {
+		width: 100%;
+	}
 	.join_wrap {
 		.h2_ti {
 			padding-bottom: 0;
@@ -1312,6 +1291,82 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 			padding-bottom: 20px;
 			font-size: 14px;
 		}
+	}
+
+	.tooltiptext {
+		// visibility: hidden;
+		min-width: 130px;
+		bottom: 150%;
+		left: 0;
+		// margin-left: -60px;
+		background-color: #159FE3;
+		color: #fff !important;
+		text-align: center;
+		border-radius: 5px;
+		padding: 5px 6px !important;
+	
+		position: absolute;
+		z-index: 1;
+		font-size: 13px !important;
+		font-weight: 300;
+    white-space: nowrap;
+    &.tooltip-top {
+      &::after {
+        content: " ";
+        position: absolute;
+        border-style: solid;
+        border-width: 5px;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: #159FE3 transparent transparent transparent;
+      }
+    }
+    &.tooltip-bottom {
+      bottom: -180%;
+      &::after {
+        content: " ";
+        position: absolute;
+        border-style: solid;
+        border-width: 5px;
+        top: -10px;
+        left: 50%;
+        margin-left: -5px;
+        border-bottom: 5px solid #159FE3;
+        border-top: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+	}
+
+	.join_wrap {
+		.h2_ti {
+			padding-bottom: 0;
+			margin-bottom: 18px;
+		}
+    .recom {
+      position: relative;
+      .tooltiptext {
+        bottom: -70%;
+        &::after {
+          left: 10%;
+        }
+      }
+    }
+    .recom-noti {
+      margin-bottom: 70px;
+      margin-top: 60px;
+      dd {
+        color: #159FE3;
+        &::before {
+          content: '-';
+          top: 0;
+          background-color: transparent;
+          color: #159FE3;
+        }
+      }
+    }
 	}
 
 	.swiper-container {
@@ -1384,4 +1439,22 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 			background-color: #000;
 		}
 	}
+
+	.join_form {
+    .etc_frm {
+      .select_chk {
+        .rchk {
+          position: relative;
+          .tooltiptext {
+            &::after {
+              left: 10%;
+            }
+          }
+        }
+      }
+    }
+    .terms_chk._child {
+      margin-top: 60px;
+    }
+  }
 }

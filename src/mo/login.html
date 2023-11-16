@@ -37,7 +37,7 @@
 							</div>
 
 							<div class="chk">
-								<input type="checkbox" name="id_auto" id="autologin"><label for="autologin">자동 로그인</label>
+								<input type="checkbox" name="id_auto" id="autologin" checked><label for="autologin">자동 로그인</label>
 								<input type="checkbox" name="id_saved" id="idsave"><label for="idsave">아이디 저장</label>
 							</div>
 						</form>
@@ -101,29 +101,29 @@
 
 
 			<script>
-				Kakao.init("8841bbaa64390509a82049e2a82e6038");
-				var kkoInit = Kakao.isInitialized();
+				// Kakao.init("8841bbaa64390509a82049e2a82e6038");
+				// var kkoInit = Kakao.isInitialized();
 
-				var autoLogin = $('input[name=auto_login]').prop('checked');
-				$('input[name=auto_login]').change(function () {
-					autoLogin = $('input[name=auto_login]').prop('checked');
-				})
+				// var autoLogin = $('input[name=auto_login]').prop('checked');
+				// $('input[name=auto_login]').change(function () {
+				// 	autoLogin = $('input[name=auto_login]').prop('checked');
+				// })
 
-				function loginWithKakao() {
-					if (!kkoInit) {
-						alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
-						return false;
-					}
+				// function loginWithKakao() {
+				// 	if (!kkoInit) {
+				// 		alert('카카오 로그인에 문제가 생겼습니다.\n관리자에게 문의해주세요.');
+				// 		return false;
+				// 	}
 
-					var autoParam = '';
-					if (autoLogin) var autoParam = '/is_auto';
+				// 	var autoParam = '';
+				// 	if (autoLogin) var autoParam = '/is_auto';
 
-					Kakao.Auth.authorize({
-						redirectUri: "https://www.yksso.co.kr" + '/auth/kakao' + autoParam,
-						serviceTerms: "sso_terms_agree,sso_privacy_agree,ykbrand_terms_agree,ykbrand_ad_receive_agree,sso_privacy_service_agree,ykbrand_adinfo_receive_SMS,ykbrand_adinfo_receive_EMAIL",
-						channelPublicId: "null",
-					});
-				}
+				// 	Kakao.Auth.authorize({
+				// 		redirectUri: "https://www.yksso.co.kr" + '/auth/kakao' + autoParam,
+				// 		serviceTerms: "sso_terms_agree,sso_privacy_agree,ykbrand_terms_agree,ykbrand_ad_receive_agree,sso_privacy_service_agree,ykbrand_adinfo_receive_SMS,ykbrand_adinfo_receive_EMAIL",
+				// 		channelPublicId: "null",
+				// 	});
+				// }
 			</script>
 
 			<script>
@@ -145,11 +145,6 @@
 					if (errorMessage != '') {
 						alert(errorMessage);
 					}
-
-
-
-
-
 					$(document).on('keypress', 'input[name="password"]', function (e) {
 						if (e.keyCode == 13) {
 							$('form[name="loginFrm"]').submit();
