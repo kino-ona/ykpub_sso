@@ -1296,7 +1296,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 	.tooltiptext {
 		// visibility: hidden;
 		min-width: 130px;
-		bottom: 150%;
+		top: 0;
 		left: 0;
 		// margin-left: -60px;
 		background-color: #159FE3;
@@ -1304,6 +1304,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
 		text-align: center;
 		border-radius: 5px;
 		padding: 5px 6px !important;
+		max-height: 35px;
 	
 		position: absolute;
 		z-index: 1;
@@ -1323,7 +1324,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
       }
     }
     &.tooltip-bottom {
-      bottom: -180%;
+      top: 30px;
       &::after {
         content: " ";
         position: absolute;
@@ -1348,7 +1349,7 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
     .recom {
       position: relative;
       .tooltiptext {
-        bottom: -70%;
+				top: 70px;
         &::after {
           left: 10%;
         }
@@ -1357,6 +1358,9 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
     .recom-noti {
       margin-bottom: 70px;
       margin-top: 60px;
+			p {
+				position: relative;
+			}
       dd {
         color: #159FE3;
         &::before {
@@ -1368,7 +1372,6 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
       }
     }
 	}
-
 	.swiper-container {
 		margin-left: auto;
 		margin-right: auto;

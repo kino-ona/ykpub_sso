@@ -77,7 +77,7 @@ exports.copyHtml = copyHtml;
 // css
 function compileScss(done) {
 	const options = {
-		outputStyle: "compressed",  // 컴파일 스타일: expanded, compressed
+		outputStyle: "expanded",  // 컴파일 스타일: expanded, compressed
 		indentType: "tab",      // 들여쓰기 스타일: space(default), tab
 		indentWidth: 1           // 들여쓰기 칸 수 (Default : 2)
 	};

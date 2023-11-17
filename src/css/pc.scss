@@ -4013,7 +4013,7 @@ p.help:before {
 	.tooltiptext {
 		// visibility: hidden;
 		min-width: 130px;
-		bottom: 150%;
+		top: 0;
 		left: 40%;
 		margin-left: -60px;
 		background-color: #159FE3;
@@ -4021,6 +4021,7 @@ p.help:before {
 		text-align: center;
 		border-radius: 5px;
 		padding: 5px 6px !important;
+		max-height: 33px;
 	
 		position: absolute;
 		z-index: 1;
@@ -4040,7 +4041,7 @@ p.help:before {
       }
     }
     &.tooltip-bottom {
-      bottom: -150%;
+      top: 35px;
       &::after {
         content: " ";
         position: absolute;
@@ -4055,7 +4056,6 @@ p.help:before {
         border-right: 5px solid transparent;
       }
     }
-		
 	}
 	.join_wrap {
 		.h2_ti {
@@ -4065,8 +4065,8 @@ p.help:before {
     .recom {
       position: relative;
       .tooltiptext {
+				top: 100px;
         left: 12%;
-        bottom: -50%;
         &::after {
           left: 10%;
         }
@@ -4075,6 +4075,9 @@ p.help:before {
     .recom-noti {
       margin-bottom: 70px;
       margin-top: 60px;
+			p {
+				position: relative;
+			}
       dd {
         color: #159FE3;
         &::before {
@@ -4092,7 +4095,6 @@ p.help:before {
 			font-size: 14px;
 		}
 	}
-
 	.swiper-container {
 		margin-left: auto;
 		margin-right: auto;
@@ -4163,7 +4165,6 @@ p.help:before {
 			background-color: #000;
 		}
 	}
-
   .join_form {
     .etc_frm {
       .select_chk {
