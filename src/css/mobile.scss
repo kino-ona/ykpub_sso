@@ -1456,8 +1456,20 @@ span.esse i.tag, span.sel i.tag { margin-right: 2.5px !important; margin-bottom:
         }
       }
     }
-    .terms_chk._child {
-      margin-top: 60px;
-    }
   }
 }
+/** 20231123 수정 **/
+.sso_wrap {
+	.join_form {
+    .terms_chk._child {
+      margin-top: 30px;
+    }
+
+		.childadd::after {
+			content: '';
+			display: block;
+			clear:both;
+		}
+	}
+}
+/** 20231123 수정 **/
